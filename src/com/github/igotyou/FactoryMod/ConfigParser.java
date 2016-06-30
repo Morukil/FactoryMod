@@ -1,5 +1,10 @@
 package com.github.igotyou.FactoryMod;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -18,6 +23,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
 
+import vg.civcraft.mc.citadel.command.commands.Materials;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
 import static vg.civcraft.mc.civmodcore.util.ConfigParsing.parseItemMap;
 import static vg.civcraft.mc.civmodcore.util.ConfigParsing.parseTime;
@@ -605,6 +611,29 @@ public class ConfigParser {
 	}
 
 	public void assignRecipesToFactories() {
+		// == INJECT == hijack to output CSV of recipes.
+		PrintWriter pw = null;
+		try {
+			File recipeOut = new File(plugin.getDataFolder(), "factoryRaw.csv");
+			pw = new PrintWriter(new BufferedWriter(new FileWriter(recipeOut)));
+		} catch (IOException ioe) {
+			pw = null;
+		}
+		if (pw != null) {
+			pw.print("Name, Type, Recipe Name");
+			for (Material m : Material.values()) {
+				pw.print(",");
+				pw.print(m.name());
+				pw.print(" Input");
+				//pw.print(", in-altered");
+				pw.print(",");
+				pw.print(m.name());
+				pw.print(" Output");
+				//pw.print(", out-altered");
+			}
+			pw.println();
+		}
+		// == OUTJECT ==
 		HashSet <IRecipe> usedRecipes = new HashSet<IRecipe>();
 		for (Entry<IFactoryEgg, List<String>> entry : recipeLists.entrySet()) {
 			if (entry.getKey() instanceof FurnCraftChestEgg) {
@@ -614,6 +643,28 @@ public class ConfigParser {
 					if (rec != null) {
 						recipeList.add(rec);
 						usedRecipes.add(rec);
+						//== INJECT ==
+						pw.print(entry.getKey().getName());
+						pw.print(",");
+						pw.print(entry.getKey().getClass().getSimpleName());
+						pw.print(",");
+						pw.print(rec.getRecipeName());
+						ItemMap in = null;
+						ItemMap out = null;
+						if (rec instanceof InputRecipe) {
+							in = ((InputRecipe) rec).getInput();
+						}
+						if (rec instanceof ProductionRecipe){
+							out = ((ProductionRecipe) rec).getOutput();
+						}
+						for (Material m : Material.values()) {
+							pw.print(",");
+							pw.print((in != null) ? in.getStacksByMaterial(m).getTotalItemAmount(): 0);
+							pw.print(",");
+							pw.print((out != null) ? out.getStacksByMaterial(m).getTotalItemAmount(): 0);
+						}
+						pw.println();
+						// == OUTJECT ==
 					}
 					else {
 						plugin.severe("Could not find specified recipe " + recipeName 
@@ -621,13 +672,17 @@ public class ConfigParser {
 					}
 				}
 				((FurnCraftChestEgg) entry.getKey()).setRecipes(recipeList);
-			}
+			} 
 		}
 		for(IRecipe reci : recipes.values()) {
 			if (!usedRecipes.contains(reci)) {
 				plugin.warning("The recipe " + reci.getRecipeName() + " is specified in the config, but not used in any factory");
 			}
 		}
+		// == INJECT ==
+		pw.flush();
+		pw.close();
+		// == OUTJECT ==
 	}
 	
 	public String getDefaultMenuFactory() {
