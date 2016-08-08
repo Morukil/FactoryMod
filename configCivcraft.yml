@@ -1,3 +1,9 @@
+# 
+#   inputmat1:
+#       material: STONE
+#   inputmat345FF:
+#       material: DIRT
+
 default_update_time: 1s
 default_fuel:
   charcoal:
@@ -12,11 +18,7 @@ default_decay_amount: 21
 default_health: 10000
 use_recipe_yamlidentifiers: true
 global_pylon_limit: 100
-
-
 factories:
-
-  #Base factory from which all others upgrade
   basiccontraption:
     type: FCC
     name: Basic Contraption
@@ -47,83 +49,73 @@ factories:
     - Upgrade_to_Wood_Processor
     - Upgrade_to_Basic_Forge
     - Upgrade_to_Basic_Fortification
-    
-  #Reinforcement factories
-  #Basic Contraption --> Basic Fortification
   basicFortification:
     type: FCCUPGRADE
     name: Basic Fortifications
     recipes:
-     - Produce_basic_andesite_Miner_Component
-     - Produce_basic_diorite_Miner_Component
-     - Produce_basic_granite_Miner_Component
-     - Produce_basic_ink_splashed_Hunter_Component
-     - Produce_basic_mysterious_Hunter_Component
-     - Produce_basic_sticky_Hunter_Component
-     - Produce_basic_miner_reinforcement
-     - Produce_basic_hunter_reinforcement
-     - Produce_decent_solid_Miner_Component
-     - Produce_decent_shiny_Miner_Component
-     - Produce_decent_bouncy_Hunter_Component
-     - Produce_decent_heatresistant_Hunter_Component
-     - Produce_decent_reinforcement
-     - Upgrade_to_Intermediate_Fortification
-     - Repair_Basic_Factory
-  
-  #Basic Contraption --> Basic Fortification --> Intermediate Fortification
+    - Produce_basic_andesite_Miner_Component
+    - Produce_basic_diorite_Miner_Component
+    - Produce_basic_granite_Miner_Component
+    - Produce_basic_ink_splashed_Hunter_Component
+    - Produce_basic_mysterious_Hunter_Component
+    - Produce_basic_sticky_Hunter_Component
+    - Produce_basic_miner_reinforcement
+    - Produce_basic_hunter_reinforcement
+    - Produce_decent_solid_Miner_Component
+    - Produce_decent_shiny_Miner_Component
+    - Produce_decent_bouncy_Hunter_Component
+    - Produce_decent_heatresistant_Hunter_Component
+    - Produce_decent_reinforcement
+    - Upgrade_to_Intermediate_Fortification
+    - Repair_Basic_Factory
   intermediateFortification:
     type: FCCUPGRADE
     name: Intermediate Fortifications
     recipes:
-     - Produce_basic_andesite_Miner_Component
-     - Produce_basic_diorite_Miner_Component
-     - Produce_basic_granite_Miner_Component
-     - Produce_basic_ink_splashed_Hunter_Component
-     - Produce_basic_mysterious_Hunter_Component
-     - Produce_basic_sticky_Hunter_Component
-     - Produce_basic_miner_reinforcement
-     - Produce_basic_hunter_reinforcement
-     - Produce_decent_solid_Miner_Component
-     - Produce_decent_shiny_Miner_Component
-     - Produce_decent_bouncy_Hunter_Component
-     - Produce_decent_heatresistant_Hunter_Component
-     - Produce_decent_reinforcement
-     - Produce_strong_Hunter_Component
-     - Produce_strong_Miner_Component
-     - Produce_good_reinforcement
-     - Produce_Bracers
-     - Upgrade_to_Advanced_Fortification
-     - Repair_Advanced_Factory
-     
-  #Basic Contraption --> Basic Fortification --> Intermediate Fortification --> Advanced Fortification
+    - Produce_basic_andesite_Miner_Component
+    - Produce_basic_diorite_Miner_Component
+    - Produce_basic_granite_Miner_Component
+    - Produce_basic_ink_splashed_Hunter_Component
+    - Produce_basic_mysterious_Hunter_Component
+    - Produce_basic_sticky_Hunter_Component
+    - Produce_basic_miner_reinforcement
+    - Produce_basic_hunter_reinforcement
+    - Produce_decent_solid_Miner_Component
+    - Produce_decent_shiny_Miner_Component
+    - Produce_decent_bouncy_Hunter_Component
+    - Produce_decent_heatresistant_Hunter_Component
+    - Produce_decent_reinforcement
+    - Produce_strong_Hunter_Component
+    - Produce_strong_Miner_Component
+    - Produce_good_reinforcement
+    - Produce_Bracers
+    - Upgrade_to_Advanced_Fortification
+    - Repair_Advanced_Factory
   advancedFortification:
     type: FCCUPGRADE
     name: Advanced Fortifications
     recipes:
-     - Produce_basic_andesite_Miner_Component
-     - Produce_basic_diorite_Miner_Component
-     - Produce_basic_granite_Miner_Component
-     - Produce_basic_ink_splashed_Hunter_Component
-     - Produce_basic_mysterious_Hunter_Component
-     - Produce_basic_sticky_Hunter_Component
-     - Produce_basic_miner_reinforcement
-     - Produce_basic_hunter_reinforcement
-     - Produce_decent_solid_Miner_Component
-     - Produce_decent_shiny_Miner_Component
-     - Produce_decent_bouncy_Hunter_Component
-     - Produce_decent_heatresistant_Hunter_Component
-     - Produce_decent_reinforcement
-     - Produce_strong_Hunter_Component
-     - Produce_strong_Miner_Component
-     - Produce_good_reinforcement
-     - Produce_Bracers
-     - Produce_best_reinforcement
-     - Produce_good_instant_reinforcement  
-     - Repair_Expert_Factory
-  
-  #Smelting 
+    - Produce_basic_andesite_Miner_Component
+    - Produce_basic_diorite_Miner_Component
+    - Produce_basic_granite_Miner_Component
+    - Produce_basic_ink_splashed_Hunter_Component
+    - Produce_basic_mysterious_Hunter_Component
+    - Produce_basic_sticky_Hunter_Component
+    - Produce_basic_miner_reinforcement
+    - Produce_basic_hunter_reinforcement
+    - Produce_decent_solid_Miner_Component
+    - Produce_decent_shiny_Miner_Component
+    - Produce_decent_bouncy_Hunter_Component
+    - Produce_decent_heatresistant_Hunter_Component
+    - Produce_decent_reinforcement
+    - Produce_strong_Hunter_Component
+    - Produce_strong_Miner_Component
+    - Produce_good_reinforcement
+    - Produce_Bracers
+    - Produce_best_reinforcement
+    - Produce_good_instant_reinforcement
+    - Repair_Expert_Factory
   stonesmelter:
-    #Basic Contraption --> Stone Smelter
     type: FCCUPGRADE
     name: Stone Smelter
     recipes:
@@ -135,10 +127,7 @@ factories:
     - Upgrade_to_Sand_Smelter
     - Upgrade_to_Brick_Smelter
     - Upgrade_to_Kiln
-  
-  #Ore smelting
   oresmelter:
-    #Basic Contraption --> Stone Smelter --> Ore Smelter
     type: FCCUPGRADE
     name: Ore Smelter
     recipes:
@@ -151,7 +140,6 @@ factories:
     - Upgrade_to_Gem_Extractor
     - Break_Fossil_Basic
   oresmelter2:
-    #Basic Contraption --> Stone Smelter --> Ore Smelter --> Ore Forge
     type: FCCUPGRADE
     name: Ore Forge
     recipes:
@@ -162,7 +150,6 @@ factories:
     - Break_Fossil_Advanced
     - Repair_Advanced_Factory
   gemextractor:
-    #Basic Contraption --> Stone Smelter --> Ore Smelter --> Gem Extractor
     type: FCCUPGRADE
     name: Gem Extractor
     recipes:
@@ -173,10 +160,7 @@ factories:
     - Extract_Lapis
     - Break_Fossil_Advanced
     - Repair_Advanced_Factory
-    
-  #Sand smelting
   sandsmelter:
-    #Basic Contraption --> Stone Smelter --> Sand Smelter
     type: FCCUPGRADE
     name: Sand Smelter
     recipes:
@@ -190,7 +174,6 @@ factories:
     - Upgrade_to_Sandstone_Smelter
     - Upgrade_to_Glass_Dying_Factory
   glassdying:
-    #Basic Contraption --> Stone Smelter --> Sand Smelter --> Glass Dying Factory
     type: FCCUPGRADE
     name: Glass Dying Factory
     recipes:
@@ -229,7 +212,6 @@ factories:
     - Concentrate_Rainbow
     - Repair_Factory
   advancedsandsmelter:
-    #Basic Contraption --> Stone Smelter --> Sand Smelter --> Glass Blowing Workshop
     type: FCCUPGRADE
     name: Glass Blowing Workshop
     recipes:
@@ -239,7 +221,6 @@ factories:
     - Upgrade_to_Crystallization_Factory
     - Repair_Factory
   sandstonesmelter:
-    #Basic Contraption --> Stone Smelter --> Sand Smelter --> Sandstone Smelter
     type: FCCUPGRADE
     name: Sandstone Smelter
     recipes:
@@ -255,10 +236,7 @@ factories:
     - Smelt_Smooth_Red_Sandstone
     - Sieve_Desert_Concentrate
     - Repair_Factory
-    
-  #Brick smelting
   bricksmelter:
-    #Basic Contraption --> Stone Smelter --> Brick Smelter
     type: FCCUPGRADE
     name: Brick Smelter
     recipes:
@@ -273,7 +251,6 @@ factories:
     - Upgrade_to_Quartz_Factory
     - Upgrade_to_Fancy_Stone_Smelter
   advancedstonesmelter:
-    #Basic Contraption --> Stone Smelter --> Brick Smelter --> Fancy Stone Smelter
     type: FCCUPGRADE
     name: Fancy Stone Smelter
     recipes:
@@ -283,7 +260,6 @@ factories:
     - Craft_Polished_Granite
     - Repair_Factory
   stonebricksmelter:
-    #Basic Contraption --> Stone Smelter --> Brick Smelter --> Stonebrick Smelter
     type: FCCUPGRADE
     name: Stonebrick Smelter
     recipes:
@@ -295,7 +271,6 @@ factories:
     - Craft_Mossy_Stonebrick
     - Repair_Factory
   netherbricksmelter:
-    #Basic Contraption --> Stone Smelter --> Brick Smelter --> Netherbrick Smelter
     type: FCCUPGRADE
     name: Netherbrick Smelter
     recipes:
@@ -306,7 +281,6 @@ factories:
     - Craft_Hell_Concentrate
     - Repair_Factory
   aquaticstonesmelter:
-    #Basic Contraption --> Stone Smelter --> Brick Smelter --> Aquatic Brick Smelter
     type: FCCUPGRADE
     name: Aquatic Brick Smelter
     recipes:
@@ -317,7 +291,6 @@ factories:
     - Craft_Concentrate_Of_Ocean
     - Repair_Factory
   quartzfactory:
-    #Basic Contraption --> Stone Smelter --> Brick Smelter --> Quartz Factory
     type: FCCUPGRADE
     name: Quartz Factory
     recipes:
@@ -327,10 +300,7 @@ factories:
     - Craft_Pillar_Quartz_Blocks
     - Craft_Quartz_Stairs
     - Repair_Factory
-    
-  #Clay Smelting
   kiln:
-    #Basic Contraption --> Stone Smelter --> Kiln
     type: FCCUPGRADE
     name: Kiln
     recipes:
@@ -338,8 +308,6 @@ factories:
     - Harden_Clay_Basic
     - Craft_Flowerpots
     - Repair_Factory
-    
-  #Wood processing
   woodprocessor:
     type: FCCUPGRADE
     name: Wood Processor
@@ -706,526 +674,512 @@ factories:
     type: FCCUPGRADE
     name: Basic Pylon
     recipes:
-     - Pylon_Basic
-     - Upgrade_to_Advanced_Pylon
-     - Repair_Basic_Pylon
+    - Pylon_Basic
+    - Upgrade_to_Advanced_Pylon
+    - Repair_Basic_Pylon
   advancedPylon:
     type: FCCUPGRADE
     name: Advanced Pylon
     recipes:
-     - Pylon_Advanced
-     - Upgrade_to_Expert_Pylon
-     - Repair_Advanced_Pylon
+    - Pylon_Advanced
+    - Upgrade_to_Expert_Pylon
+    - Repair_Advanced_Pylon
   expertpylon:
     type: FCCUPGRADE
     name: Expert Pylon
     recipes:
-     - Pylon_Expert
-     - Repair_Expert_Pylon
+    - Pylon_Expert
+    - Repair_Expert_Pylon
   crystallizationfactory:
     type: FCCUPGRADE
     name: Crystallization Factory
     recipes:
-     - Pack_Snow_To_Ice
-     - Compress_Ice_To_Packed_Ice
-     - Repair_Factory
-## Enchanting
+    - Pack_Snow_To_Ice
+    - Compress_Ice_To_Packed_Ice
+    - Repair_Factory
   basicforge:
     type: FCCUPGRADE
     name: Basic Forge
     recipes:
-     - Enchant_Efficiency_Pickaxe_Basic
-     - Enchant_Efficiency_Axe_Basic
-     - Enchant_Efficiency_Shovel_Basic
-     - Enchant_Unbreaking_Pickaxe_Basic
-     - Enchant_Unbreaking_Axe_Basic
-     - Enchant_Unbreaking_Shovel_Basic
-     - Enchant_Unbreaking_Sword_Basic
-     - Enchant_Sharpness_Basic
-     - Upgrade_to_Ember_Forge
-     - Upgrade_to_River_Forge
-     - Upgrade_to_Magic_Forge
-     - Upgrade_to_Mithril_Forge
-     - Upgrade_to_Archer_Forge
-     - Upgrade_to_Dagger_Forge
-     - Upgrade_to_Quick_Forge
-     - Upgrade_to_Rock_Forge
-     - Repair_Factory
-#Fire
+    - Enchant_Efficiency_Pickaxe_Basic
+    - Enchant_Efficiency_Axe_Basic
+    - Enchant_Efficiency_Shovel_Basic
+    - Enchant_Unbreaking_Pickaxe_Basic
+    - Enchant_Unbreaking_Axe_Basic
+    - Enchant_Unbreaking_Shovel_Basic
+    - Enchant_Unbreaking_Sword_Basic
+    - Enchant_Sharpness_Basic
+    - Upgrade_to_Ember_Forge
+    - Upgrade_to_River_Forge
+    - Upgrade_to_Magic_Forge
+    - Upgrade_to_Mithril_Forge
+    - Upgrade_to_Archer_Forge
+    - Upgrade_to_Dagger_Forge
+    - Upgrade_to_Quick_Forge
+    - Upgrade_to_Rock_Forge
+    - Repair_Factory
   emberforge:
     type: FCCUPGRADE
     name: Ember Forge
     recipes:
-     - Enchant_Helmet_FireP_I
-     - Enchant_Helmet_FireP_II
-     - Enchant_Helmet_FireP_III
-     - Enchant_Chestplate_FireP_I
-     - Enchant_Chestplate_FireP_II
-     - Enchant_Chestplate_FireP_III
-     - Enchant_Leggings_FireP_I
-     - Enchant_Leggings_FireP_II
-     - Enchant_Leggings_FireP_III
-     - Enchant_Boots_FireP_I
-     - Enchant_Boots_FireP_II
-     - Enchant_Boots_FireP_III
-     - Enchant_FireAspect_I
-     - Upgrade_to_Magma_Forge
-     - Repair_Factory
+    - Enchant_Helmet_FireP_I
+    - Enchant_Helmet_FireP_II
+    - Enchant_Helmet_FireP_III
+    - Enchant_Chestplate_FireP_I
+    - Enchant_Chestplate_FireP_II
+    - Enchant_Chestplate_FireP_III
+    - Enchant_Leggings_FireP_I
+    - Enchant_Leggings_FireP_II
+    - Enchant_Leggings_FireP_III
+    - Enchant_Boots_FireP_I
+    - Enchant_Boots_FireP_II
+    - Enchant_Boots_FireP_III
+    - Enchant_FireAspect_I
+    - Upgrade_to_Magma_Forge
+    - Repair_Factory
   magmaforge:
     type: FCCUPGRADE
     name: Magma Forge
     recipes:
-     - Enchant_Helmet_FireP_I
-     - Enchant_Helmet_FireP_II
-     - Enchant_Helmet_FireP_III
-     - Enchant_Helmet_FireP_IV
-     - Enchant_Helmet_FireP_V
-     - Enchant_Helmet_FireP_VI
-     - Enchant_Chestplate_FireP_I
-     - Enchant_Chestplate_FireP_II
-     - Enchant_Chestplate_FireP_III
-     - Enchant_Chestplate_FireP_IV
-     - Enchant_Chestplate_FireP_V
-     - Enchant_Chestplate_FireP_VI
-     - Enchant_Leggings_FireP_I
-     - Enchant_Leggings_FireP_II
-     - Enchant_Leggings_FireP_III
-     - Enchant_Leggings_FireP_IV
-     - Enchant_Leggings_FireP_V
-     - Enchant_Leggings_FireP_VI
-     - Enchant_Boots_FireP_I
-     - Enchant_Boots_FireP_II
-     - Enchant_Boots_FireP_III
-     - Enchant_Boots_FireP_IV
-     - Enchant_Boots_FireP_V
-     - Enchant_Boots_FireP_VI
-     - Enchant_Flame_I
-     - Enchant_FireAspect_I
-     - Enchant_FireAspect_II
-     - Repair_Advanced_Factory
-#Water
+    - Enchant_Helmet_FireP_I
+    - Enchant_Helmet_FireP_II
+    - Enchant_Helmet_FireP_III
+    - Enchant_Helmet_FireP_IV
+    - Enchant_Helmet_FireP_V
+    - Enchant_Helmet_FireP_VI
+    - Enchant_Chestplate_FireP_I
+    - Enchant_Chestplate_FireP_II
+    - Enchant_Chestplate_FireP_III
+    - Enchant_Chestplate_FireP_IV
+    - Enchant_Chestplate_FireP_V
+    - Enchant_Chestplate_FireP_VI
+    - Enchant_Leggings_FireP_I
+    - Enchant_Leggings_FireP_II
+    - Enchant_Leggings_FireP_III
+    - Enchant_Leggings_FireP_IV
+    - Enchant_Leggings_FireP_V
+    - Enchant_Leggings_FireP_VI
+    - Enchant_Boots_FireP_I
+    - Enchant_Boots_FireP_II
+    - Enchant_Boots_FireP_III
+    - Enchant_Boots_FireP_IV
+    - Enchant_Boots_FireP_V
+    - Enchant_Boots_FireP_VI
+    - Enchant_Flame_I
+    - Enchant_FireAspect_I
+    - Enchant_FireAspect_II
+    - Repair_Advanced_Factory
   riverforge:
     type: FCCUPGRADE
     name: River Forge
     recipes:
-     - Enchant_DepthStrider_I
-     - Enchant_Respiration_I
-     - Enchant_Respiration_II
-     - Enchant_Frost_Walker_I
-     - Upgrade_to_Ocean_Forge
-     - Repair_Factory
+    - Enchant_DepthStrider_I
+    - Enchant_Respiration_I
+    - Enchant_Respiration_II
+    - Enchant_Frost_Walker_I
+    - Upgrade_to_Ocean_Forge
+    - Repair_Factory
   oceanforge:
     type: FCCUPGRADE
     name: Ocean Forge
     recipes:
-     - Enchant_DepthStrider_I
-     - Enchant_DepthStrider_II
-     - Enchant_DepthStrider_III
-     - Enchant_AquaAffinity_I
-     - Enchant_Respiration_I
-     - Enchant_Respiration_II
-     - Enchant_Respiration_III
-     - Enchant_Frost_Walker_I
-     - Enchant_Frost_Walker_II
-     - Repair_Advanced_Factory
-#Magic
+    - Enchant_DepthStrider_I
+    - Enchant_DepthStrider_II
+    - Enchant_DepthStrider_III
+    - Enchant_AquaAffinity_I
+    - Enchant_Respiration_I
+    - Enchant_Respiration_II
+    - Enchant_Respiration_III
+    - Enchant_Frost_Walker_I
+    - Enchant_Frost_Walker_II
+    - Repair_Advanced_Factory
   magicforge:
     type: FCCUPGRADE
     name: Magic Forge
     recipes:
-     - Enchant_FeatherFalling_I
-     - Enchant_FeatherFalling_II
-     - Enchant_BOA_I
-     - Enchant_BOA_II
-     - Enchant_BOA_III
-     - Upgrade_to_Arcane_Forge
-     - Repair_Factory
+    - Enchant_FeatherFalling_I
+    - Enchant_FeatherFalling_II
+    - Enchant_BOA_I
+    - Enchant_BOA_II
+    - Enchant_BOA_III
+    - Upgrade_to_Arcane_Forge
+    - Repair_Factory
   arcaneforge:
     type: FCCUPGRADE
     name: Arcane Forge
     recipes:
-     - Enchant_Infinity_I
-     - Enchant_Pickaxe_SilkTouch_I
-     - Enchant_Axe_SilkTouch_I
-     - Enchant_Shovel_SilkTouch_I
-     - Enchant_FeatherFalling_I
-     - Enchant_FeatherFalling_II
-     - Enchant_FeatherFalling_III
-     - Enchant_FeatherFalling_IV
-     - Enchant_BOA_I
-     - Enchant_BOA_II
-     - Enchant_BOA_III
-     - Enchant_BOA_IV
-     - Enchant_BOA_V
-     - Repair_Advanced_Factory
-#Armor
+    - Enchant_Infinity_I
+    - Enchant_Pickaxe_SilkTouch_I
+    - Enchant_Axe_SilkTouch_I
+    - Enchant_Shovel_SilkTouch_I
+    - Enchant_FeatherFalling_I
+    - Enchant_FeatherFalling_II
+    - Enchant_FeatherFalling_III
+    - Enchant_FeatherFalling_IV
+    - Enchant_BOA_I
+    - Enchant_BOA_II
+    - Enchant_BOA_III
+    - Enchant_BOA_IV
+    - Enchant_BOA_V
+    - Repair_Advanced_Factory
   mithrilforge:
     type: FCCUPGRADE
     name: Mithril Forge
     recipes:
-     - Enchant_Helmet_Protection_I
-     - Enchant_Chestplate_Protection_I
-     - Enchant_Leggings_Protection_I
-     - Enchant_Boots_Protection_I
-     - Enchant_Helmet_BlastProtection_I
-     - Enchant_Chestplate_BlastProtection_I
-     - Enchant_Leggings_BlastProtection_I
-     - Enchant_Boots_BlastProtection_I
-     - Enchant_Thorns_I
-     - Upgrade_to_Titanium_Forge
-     - Repair_Factory
+    - Enchant_Helmet_Protection_I
+    - Enchant_Chestplate_Protection_I
+    - Enchant_Leggings_Protection_I
+    - Enchant_Boots_Protection_I
+    - Enchant_Helmet_BlastProtection_I
+    - Enchant_Chestplate_BlastProtection_I
+    - Enchant_Leggings_BlastProtection_I
+    - Enchant_Boots_BlastProtection_I
+    - Enchant_Thorns_I
+    - Upgrade_to_Titanium_Forge
+    - Repair_Factory
   titaniumforge:
     type: FCCUPGRADE
     name: Titanium Forge
     recipes:
-     - Enchant_Helmet_Protection_I
-     - Enchant_Helmet_Protection_II
-     - Enchant_Helmet_Protection_III
-     - Enchant_Chestplate_Protection_I
-     - Enchant_Chestplate_Protection_II
-     - Enchant_Chestplate_Protection_III
-     - Enchant_Leggings_Protection_I
-     - Enchant_Leggings_Protection_II
-     - Enchant_Leggings_Protection_III
-     - Enchant_Boots_Protection_I
-     - Enchant_Boots_Protection_II
-     - Enchant_Boots_Protection_III
-     - Enchant_Helmet_BlastProtection_I
-     - Enchant_Helmet_BlastProtection_II
-     - Enchant_Helmet_BlastProtection_III
-     - Enchant_Chestplate_BlastProtection_I
-     - Enchant_Chestplate_BlastProtection_II
-     - Enchant_Chestplate_BlastProtection_III
-     - Enchant_Leggings_BlastProtection_I
-     - Enchant_Leggings_BlastProtection_II
-     - Enchant_Leggings_BlastProtection_III
-     - Enchant_Boots_BlastProtection_I
-     - Enchant_Boots_BlastProtection_II
-     - Enchant_Boots_BlastProtection_III
-     - Enchant_Thorns_I
-     - Enchant_Thorns_II
-     - Upgrade_to_Meteor_Forge
-     - Repair_Advanced_Factory
+    - Enchant_Helmet_Protection_I
+    - Enchant_Helmet_Protection_II
+    - Enchant_Helmet_Protection_III
+    - Enchant_Chestplate_Protection_I
+    - Enchant_Chestplate_Protection_II
+    - Enchant_Chestplate_Protection_III
+    - Enchant_Leggings_Protection_I
+    - Enchant_Leggings_Protection_II
+    - Enchant_Leggings_Protection_III
+    - Enchant_Boots_Protection_I
+    - Enchant_Boots_Protection_II
+    - Enchant_Boots_Protection_III
+    - Enchant_Helmet_BlastProtection_I
+    - Enchant_Helmet_BlastProtection_II
+    - Enchant_Helmet_BlastProtection_III
+    - Enchant_Chestplate_BlastProtection_I
+    - Enchant_Chestplate_BlastProtection_II
+    - Enchant_Chestplate_BlastProtection_III
+    - Enchant_Leggings_BlastProtection_I
+    - Enchant_Leggings_BlastProtection_II
+    - Enchant_Leggings_BlastProtection_III
+    - Enchant_Boots_BlastProtection_I
+    - Enchant_Boots_BlastProtection_II
+    - Enchant_Boots_BlastProtection_III
+    - Enchant_Thorns_I
+    - Enchant_Thorns_II
+    - Upgrade_to_Meteor_Forge
+    - Repair_Advanced_Factory
   Meteorforge:
     type: FCCUPGRADE
     name: Meteor Forge
     recipes:
-     - Enchant_Helmet_Protection_I
-     - Enchant_Helmet_Protection_II
-     - Enchant_Helmet_Protection_III
-     - Enchant_Helmet_Protection_IV
-     - Enchant_Chestplate_Protection_I
-     - Enchant_Chestplate_Protection_II
-     - Enchant_Chestplate_Protection_III
-     - Enchant_Chestplate_Protection_IV
-     - Enchant_Leggings_Protection_I
-     - Enchant_Leggings_Protection_II
-     - Enchant_Leggings_Protection_III
-     - Enchant_Leggings_Protection_IV
-     - Enchant_Boots_Protection_I
-     - Enchant_Boots_Protection_II
-     - Enchant_Boots_Protection_III
-     - Enchant_Boots_Protection_IV
-     - Enchant_Helmet_BlastProtection_I
-     - Enchant_Helmet_BlastProtection_II
-     - Enchant_Helmet_BlastProtection_III
-     - Enchant_Helmet_BlastProtection_IV
-     - Enchant_Chestplate_BlastProtection_I
-     - Enchant_Chestplate_BlastProtection_II
-     - Enchant_Chestplate_BlastProtection_III
-     - Enchant_Chestplate_BlastProtection_IV
-     - Enchant_Leggings_BlastProtection_I
-     - Enchant_Leggings_BlastProtection_II
-     - Enchant_Leggings_BlastProtection_III
-     - Enchant_Leggings_BlastProtection_IV
-     - Enchant_Boots_BlastProtection_I
-     - Enchant_Boots_BlastProtection_II
-     - Enchant_Boots_BlastProtection_III
-     - Enchant_Boots_BlastProtection_IV
-     - Enchant_Thorns_I
-     - Enchant_Thorns_II
-     - Enchant_Thorns_III
-     - Repair_Expert_Factory
-#Archery
+    - Enchant_Helmet_Protection_I
+    - Enchant_Helmet_Protection_II
+    - Enchant_Helmet_Protection_III
+    - Enchant_Helmet_Protection_IV
+    - Enchant_Chestplate_Protection_I
+    - Enchant_Chestplate_Protection_II
+    - Enchant_Chestplate_Protection_III
+    - Enchant_Chestplate_Protection_IV
+    - Enchant_Leggings_Protection_I
+    - Enchant_Leggings_Protection_II
+    - Enchant_Leggings_Protection_III
+    - Enchant_Leggings_Protection_IV
+    - Enchant_Boots_Protection_I
+    - Enchant_Boots_Protection_II
+    - Enchant_Boots_Protection_III
+    - Enchant_Boots_Protection_IV
+    - Enchant_Helmet_BlastProtection_I
+    - Enchant_Helmet_BlastProtection_II
+    - Enchant_Helmet_BlastProtection_III
+    - Enchant_Helmet_BlastProtection_IV
+    - Enchant_Chestplate_BlastProtection_I
+    - Enchant_Chestplate_BlastProtection_II
+    - Enchant_Chestplate_BlastProtection_III
+    - Enchant_Chestplate_BlastProtection_IV
+    - Enchant_Leggings_BlastProtection_I
+    - Enchant_Leggings_BlastProtection_II
+    - Enchant_Leggings_BlastProtection_III
+    - Enchant_Leggings_BlastProtection_IV
+    - Enchant_Boots_BlastProtection_I
+    - Enchant_Boots_BlastProtection_II
+    - Enchant_Boots_BlastProtection_III
+    - Enchant_Boots_BlastProtection_IV
+    - Enchant_Thorns_I
+    - Enchant_Thorns_II
+    - Enchant_Thorns_III
+    - Repair_Expert_Factory
   archerforge:
     type: FCCUPGRADE
     name: Archer Forge
     recipes:
-     - Enchant_Power_I
-     - Enchant_Power_II
-     - Enchant_Helmet_ProjectileProtection_I
-     - Enchant_Chestplate_ProjectileProtection_I
-     - Enchant_Leggings_ProjectileProtection_I
-     - Enchant_Boots_ProjectileProtection_I
-     - Upgrade_to_Marksman_Forge
-     - Repair_Factory
+    - Enchant_Power_I
+    - Enchant_Power_II
+    - Enchant_Helmet_ProjectileProtection_I
+    - Enchant_Chestplate_ProjectileProtection_I
+    - Enchant_Leggings_ProjectileProtection_I
+    - Enchant_Boots_ProjectileProtection_I
+    - Upgrade_to_Marksman_Forge
+    - Repair_Factory
   marksmanforge:
     type: FCCUPGRADE
     name: Marksman Forge
     recipes:
-     - Enchant_Power_I
-     - Enchant_Power_II
-     - Enchant_Power_III
-     - Enchant_Power_IV
-     - Enchant_Helmet_ProjectileProtection_I
-     - Enchant_Helmet_ProjectileProtection_II
-     - Enchant_Helmet_ProjectileProtection_III
-     - Enchant_Chestplate_ProjectileProtection_I
-     - Enchant_Chestplate_ProjectileProtection_II
-     - Enchant_Chestplate_ProjectileProtection_III
-     - Enchant_Leggings_ProjectileProtection_I
-     - Enchant_Leggings_ProjectileProtection_II
-     - Enchant_Leggings_ProjectileProtection_III
-     - Enchant_Boots_ProjectileProtection_I
-     - Enchant_Boots_ProjectileProtection_II
-     - Enchant_Boots_ProjectileProtection_III
-     - Enchant_Punch_I
-     - Upgrade_to_Sniper_Forge
-     - Repair_Advanced_Factory
+    - Enchant_Power_I
+    - Enchant_Power_II
+    - Enchant_Power_III
+    - Enchant_Power_IV
+    - Enchant_Helmet_ProjectileProtection_I
+    - Enchant_Helmet_ProjectileProtection_II
+    - Enchant_Helmet_ProjectileProtection_III
+    - Enchant_Chestplate_ProjectileProtection_I
+    - Enchant_Chestplate_ProjectileProtection_II
+    - Enchant_Chestplate_ProjectileProtection_III
+    - Enchant_Leggings_ProjectileProtection_I
+    - Enchant_Leggings_ProjectileProtection_II
+    - Enchant_Leggings_ProjectileProtection_III
+    - Enchant_Boots_ProjectileProtection_I
+    - Enchant_Boots_ProjectileProtection_II
+    - Enchant_Boots_ProjectileProtection_III
+    - Enchant_Punch_I
+    - Upgrade_to_Sniper_Forge
+    - Repair_Advanced_Factory
   sniperforge:
     type: FCCUPGRADE
     name: Sniper Forge
     recipes:
-     - Enchant_Power_I
-     - Enchant_Power_II
-     - Enchant_Power_III
-     - Enchant_Power_IV
-     - Enchant_Power_V
-     - Enchant_Helmet_ProjectileProtection_I
-     - Enchant_Helmet_ProjectileProtection_II
-     - Enchant_Helmet_ProjectileProtection_III
-     - Enchant_Helmet_ProjectileProtection_IV
-     - Enchant_Chestplate_ProjectileProtection_I
-     - Enchant_Chestplate_ProjectileProtection_II
-     - Enchant_Chestplate_ProjectileProtection_III
-     - Enchant_Chestplate_ProjectileProtection_IV
-     - Enchant_Leggings_ProjectileProtection_I
-     - Enchant_Leggings_ProjectileProtection_II
-     - Enchant_Leggings_ProjectileProtection_III
-     - Enchant_Leggings_ProjectileProtection_IV
-     - Enchant_Boots_ProjectileProtection_I
-     - Enchant_Boots_ProjectileProtection_II
-     - Enchant_Boots_ProjectileProtection_III
-     - Enchant_Boots_ProjectileProtection_IV
-     - Enchant_Punch_I
-     - Enchant_Punch_II
-     - Repair_Expert_Factory
-#Swords
+    - Enchant_Power_I
+    - Enchant_Power_II
+    - Enchant_Power_III
+    - Enchant_Power_IV
+    - Enchant_Power_V
+    - Enchant_Helmet_ProjectileProtection_I
+    - Enchant_Helmet_ProjectileProtection_II
+    - Enchant_Helmet_ProjectileProtection_III
+    - Enchant_Helmet_ProjectileProtection_IV
+    - Enchant_Chestplate_ProjectileProtection_I
+    - Enchant_Chestplate_ProjectileProtection_II
+    - Enchant_Chestplate_ProjectileProtection_III
+    - Enchant_Chestplate_ProjectileProtection_IV
+    - Enchant_Leggings_ProjectileProtection_I
+    - Enchant_Leggings_ProjectileProtection_II
+    - Enchant_Leggings_ProjectileProtection_III
+    - Enchant_Leggings_ProjectileProtection_IV
+    - Enchant_Boots_ProjectileProtection_I
+    - Enchant_Boots_ProjectileProtection_II
+    - Enchant_Boots_ProjectileProtection_III
+    - Enchant_Boots_ProjectileProtection_IV
+    - Enchant_Punch_I
+    - Enchant_Punch_II
+    - Repair_Expert_Factory
   daggerforge:
     type: FCCUPGRADE
     name: Dagger Forge
     recipes:
-     - Enchant_Sharpness_I
-     - Enchant_Sharpness_II
-     - Enchant_Smite_I
-     - Enchant_Smite_II
-     - Upgrade_to_Sword_Forge
-     - Repair_Factory
+    - Enchant_Sharpness_I
+    - Enchant_Sharpness_II
+    - Enchant_Smite_I
+    - Enchant_Smite_II
+    - Upgrade_to_Sword_Forge
+    - Repair_Factory
   swordforge:
     type: FCCUPGRADE
     name: Sword Forge
     recipes:
-     - Enchant_Sharpness_I
-     - Enchant_Sharpness_II
-     - Enchant_Sharpness_III
-     - Enchant_Sharpness_IV
-     - Enchant_Smite_I
-     - Enchant_Smite_II
-     - Enchant_Smite_III
-     - Enchant_Smite_IV
-     - Enchant_Knockback_I
-     - Upgrade_to_Blade_Forge
-     - Repair_Advanced_Factory
+    - Enchant_Sharpness_I
+    - Enchant_Sharpness_II
+    - Enchant_Sharpness_III
+    - Enchant_Sharpness_IV
+    - Enchant_Smite_I
+    - Enchant_Smite_II
+    - Enchant_Smite_III
+    - Enchant_Smite_IV
+    - Enchant_Knockback_I
+    - Upgrade_to_Blade_Forge
+    - Repair_Advanced_Factory
   bladeforge:
     type: FCCUPGRADE
     name: Blade Forge
     recipes:
-     - Enchant_Sharpness_I
-     - Enchant_Sharpness_II
-     - Enchant_Sharpness_III
-     - Enchant_Sharpness_IV
-     - Enchant_Sharpness_V
-     - Enchant_Smite_I
-     - Enchant_Smite_II
-     - Enchant_Smite_III
-     - Enchant_Smite_IV
-     - Enchant_Smite_V
-     - Enchant_Knockback_I
-     - Enchant_Knockback_II
-     - Repair_Expert_Factory
-#Efficiency
+    - Enchant_Sharpness_I
+    - Enchant_Sharpness_II
+    - Enchant_Sharpness_III
+    - Enchant_Sharpness_IV
+    - Enchant_Sharpness_V
+    - Enchant_Smite_I
+    - Enchant_Smite_II
+    - Enchant_Smite_III
+    - Enchant_Smite_IV
+    - Enchant_Smite_V
+    - Enchant_Knockback_I
+    - Enchant_Knockback_II
+    - Repair_Expert_Factory
   quickforge:
     type: FCCUPGRADE
     name: Quick Forge
     recipes:
-     - Enchant_Pickaxe_Efficiency_I
-     - Enchant_Pickaxe_Efficiency_II
-     - Enchant_Axe_Efficiency_I
-     - Enchant_Axe_Efficiency_II
-     - Enchant_Shovel_Efficiency_I
-     - Enchant_Shovel_Efficiency_II
-     - Upgrade_to_Rapid_Forge
-     - Repair_Factory
+    - Enchant_Pickaxe_Efficiency_I
+    - Enchant_Pickaxe_Efficiency_II
+    - Enchant_Axe_Efficiency_I
+    - Enchant_Axe_Efficiency_II
+    - Enchant_Shovel_Efficiency_I
+    - Enchant_Shovel_Efficiency_II
+    - Upgrade_to_Rapid_Forge
+    - Repair_Factory
   rapidforge:
     type: FCCUPGRADE
     name: Rapid Forge
     recipes:
-     - Enchant_Pickaxe_Efficiency_I
-     - Enchant_Pickaxe_Efficiency_II
-     - Enchant_Pickaxe_Efficiency_III
-     - Enchant_Pickaxe_Efficiency_IV
-     - Enchant_Axe_Efficiency_I
-     - Enchant_Axe_Efficiency_II
-     - Enchant_Axe_Efficiency_III
-     - Enchant_Axe_Efficiency_IV
-     - Enchant_Shovel_Efficiency_I
-     - Enchant_Shovel_Efficiency_II
-     - Enchant_Shovel_Efficiency_III
-     - Enchant_Shovel_Efficiency_IV
-     - Upgrade_to_Sonic_Forge
-     - Repair_Advanced_Factory
+    - Enchant_Pickaxe_Efficiency_I
+    - Enchant_Pickaxe_Efficiency_II
+    - Enchant_Pickaxe_Efficiency_III
+    - Enchant_Pickaxe_Efficiency_IV
+    - Enchant_Axe_Efficiency_I
+    - Enchant_Axe_Efficiency_II
+    - Enchant_Axe_Efficiency_III
+    - Enchant_Axe_Efficiency_IV
+    - Enchant_Shovel_Efficiency_I
+    - Enchant_Shovel_Efficiency_II
+    - Enchant_Shovel_Efficiency_III
+    - Enchant_Shovel_Efficiency_IV
+    - Upgrade_to_Sonic_Forge
+    - Repair_Advanced_Factory
   sonicforge:
     type: FCCUPGRADE
     name: Sonic Forge
     recipes:
-     - Enchant_Pickaxe_Efficiency_I
-     - Enchant_Pickaxe_Efficiency_II
-     - Enchant_Pickaxe_Efficiency_III
-     - Enchant_Pickaxe_Efficiency_IV
-     - Enchant_Pickaxe_Efficiency_V
-     - Enchant_Axe_Efficiency_I
-     - Enchant_Axe_Efficiency_II
-     - Enchant_Axe_Efficiency_III
-     - Enchant_Axe_Efficiency_IV
-     - Enchant_Axe_Efficiency_V
-     - Enchant_Shovel_Efficiency_I
-     - Enchant_Shovel_Efficiency_II
-     - Enchant_Shovel_Efficiency_III
-     - Enchant_Shovel_Efficiency_IV
-     - Enchant_Shovel_Efficiency_V
-     - Repair_Expert_Factory
-#Unbreaking
+    - Enchant_Pickaxe_Efficiency_I
+    - Enchant_Pickaxe_Efficiency_II
+    - Enchant_Pickaxe_Efficiency_III
+    - Enchant_Pickaxe_Efficiency_IV
+    - Enchant_Pickaxe_Efficiency_V
+    - Enchant_Axe_Efficiency_I
+    - Enchant_Axe_Efficiency_II
+    - Enchant_Axe_Efficiency_III
+    - Enchant_Axe_Efficiency_IV
+    - Enchant_Axe_Efficiency_V
+    - Enchant_Shovel_Efficiency_I
+    - Enchant_Shovel_Efficiency_II
+    - Enchant_Shovel_Efficiency_III
+    - Enchant_Shovel_Efficiency_IV
+    - Enchant_Shovel_Efficiency_V
+    - Repair_Expert_Factory
   rockforge:
     type: FCCUPGRADE
     name: Rock Forge
     recipes:
-     - Enchant_Pickaxe_Unbreaking_I
-     - Enchant_Axe_Unbreaking_I
-     - Enchant_Shovel_Unbreaking_I
-     - Enchant_Helmet_Unbreaking_I
-     - Enchant_Chestplate_Unbreaking_I
-     - Enchant_Leggings_Unbreaking_I
-     - Enchant_Boots_Unbreaking_I
-     - Enchant_Shield_Unbreaking_I
-     - Enchant_Sword_Unbreaking_I
-     - Enchant_Bow_Unbreaking_I
-     - Upgrade_to_Metal_Forge
-     - Repair_Factory
+    - Enchant_Pickaxe_Unbreaking_I
+    - Enchant_Axe_Unbreaking_I
+    - Enchant_Shovel_Unbreaking_I
+    - Enchant_Helmet_Unbreaking_I
+    - Enchant_Chestplate_Unbreaking_I
+    - Enchant_Leggings_Unbreaking_I
+    - Enchant_Boots_Unbreaking_I
+    - Enchant_Shield_Unbreaking_I
+    - Enchant_Sword_Unbreaking_I
+    - Enchant_Bow_Unbreaking_I
+    - Upgrade_to_Metal_Forge
+    - Repair_Factory
   metalforge:
     type: FCCUPGRADE
     name: Metal Forge
     recipes:
-     - Enchant_Pickaxe_Unbreaking_I
-     - Enchant_Pickaxe_Unbreaking_II
-     - Enchant_Axe_Unbreaking_I
-     - Enchant_Axe_Unbreaking_II
-     - Enchant_Shovel_Unbreaking_I
-     - Enchant_Shovel_Unbreaking_II
-     - Enchant_Helmet_Unbreaking_I
-     - Enchant_Helmet_Unbreaking_II
-     - Enchant_Chestplate_Unbreaking_I
-     - Enchant_Chestplate_Unbreaking_II
-     - Enchant_Leggings_Unbreaking_I
-     - Enchant_Leggings_Unbreaking_II
-     - Enchant_Boots_Unbreaking_I
-     - Enchant_Boots_Unbreaking_II
-     - Enchant_Shield_Unbreaking_I
-     - Enchant_Shield_Unbreaking_II
-     - Enchant_Sword_Unbreaking_I
-     - Enchant_Sword_Unbreaking_II
-     - Enchant_Bow_Unbreaking_I
-     - Enchant_Bow_Unbreaking_II
-     - Upgrade_to_Carbon_Forge
-     - Repair_Advanced_Factory
+    - Enchant_Pickaxe_Unbreaking_I
+    - Enchant_Pickaxe_Unbreaking_II
+    - Enchant_Axe_Unbreaking_I
+    - Enchant_Axe_Unbreaking_II
+    - Enchant_Shovel_Unbreaking_I
+    - Enchant_Shovel_Unbreaking_II
+    - Enchant_Helmet_Unbreaking_I
+    - Enchant_Helmet_Unbreaking_II
+    - Enchant_Chestplate_Unbreaking_I
+    - Enchant_Chestplate_Unbreaking_II
+    - Enchant_Leggings_Unbreaking_I
+    - Enchant_Leggings_Unbreaking_II
+    - Enchant_Boots_Unbreaking_I
+    - Enchant_Boots_Unbreaking_II
+    - Enchant_Shield_Unbreaking_I
+    - Enchant_Shield_Unbreaking_II
+    - Enchant_Sword_Unbreaking_I
+    - Enchant_Sword_Unbreaking_II
+    - Enchant_Bow_Unbreaking_I
+    - Enchant_Bow_Unbreaking_II
+    - Upgrade_to_Carbon_Forge
+    - Repair_Advanced_Factory
   carbonforge:
     type: FCCUPGRADE
     name: Carbon Forge
     recipes:
-     - Enchant_Pickaxe_Unbreaking_I
-     - Enchant_Pickaxe_Unbreaking_II
-     - Enchant_Pickaxe_Unbreaking_III
-     - Enchant_Axe_Unbreaking_I
-     - Enchant_Axe_Unbreaking_II
-     - Enchant_Axe_Unbreaking_III
-     - Enchant_Shovel_Unbreaking_I
-     - Enchant_Shovel_Unbreaking_II
-     - Enchant_Shovel_Unbreaking_III
-     - Enchant_Helmet_Unbreaking_I
-     - Enchant_Helmet_Unbreaking_II
-     - Enchant_Helmet_Unbreaking_III
-     - Enchant_Chestplate_Unbreaking_I
-     - Enchant_Chestplate_Unbreaking_II
-     - Enchant_Chestplate_Unbreaking_III
-     - Enchant_Leggings_Unbreaking_I
-     - Enchant_Leggings_Unbreaking_II
-     - Enchant_Leggings_Unbreaking_III
-     - Enchant_Boots_Unbreaking_I
-     - Enchant_Boots_Unbreaking_II
-     - Enchant_Boots_Unbreaking_III
-     - Enchant_Shield_Unbreaking_I
-     - Enchant_Shield_Unbreaking_II
-     - Enchant_Shield_Unbreaking_III
-     - Enchant_Sword_Unbreaking_I
-     - Enchant_Sword_Unbreaking_II
-     - Enchant_Sword_Unbreaking_III
-     - Enchant_Bow_Unbreaking_I
-     - Enchant_Bow_Unbreaking_II
-     - Enchant_Bow_Unbreaking_III
-     - Repair_Expert_Factory
-     
-## XP Production
+    - Enchant_Pickaxe_Unbreaking_I
+    - Enchant_Pickaxe_Unbreaking_II
+    - Enchant_Pickaxe_Unbreaking_III
+    - Enchant_Axe_Unbreaking_I
+    - Enchant_Axe_Unbreaking_II
+    - Enchant_Axe_Unbreaking_III
+    - Enchant_Shovel_Unbreaking_I
+    - Enchant_Shovel_Unbreaking_II
+    - Enchant_Shovel_Unbreaking_III
+    - Enchant_Helmet_Unbreaking_I
+    - Enchant_Helmet_Unbreaking_II
+    - Enchant_Helmet_Unbreaking_III
+    - Enchant_Chestplate_Unbreaking_I
+    - Enchant_Chestplate_Unbreaking_II
+    - Enchant_Chestplate_Unbreaking_III
+    - Enchant_Leggings_Unbreaking_I
+    - Enchant_Leggings_Unbreaking_II
+    - Enchant_Leggings_Unbreaking_III
+    - Enchant_Boots_Unbreaking_I
+    - Enchant_Boots_Unbreaking_II
+    - Enchant_Boots_Unbreaking_III
+    - Enchant_Shield_Unbreaking_I
+    - Enchant_Shield_Unbreaking_II
+    - Enchant_Shield_Unbreaking_III
+    - Enchant_Sword_Unbreaking_I
+    - Enchant_Sword_Unbreaking_II
+    - Enchant_Sword_Unbreaking_III
+    - Enchant_Bow_Unbreaking_I
+    - Enchant_Bow_Unbreaking_II
+    - Enchant_Bow_Unbreaking_III
+    - Repair_Expert_Factory
   apprenticetransmuter:
     type: FCCUPGRADE
     name: Apprentice Transmuter
     recipes:
-     - Aspen_Enrichment
-     - Cypress_Enrichment
-     - Pine_Enrichment
-     - Upgrade_to_Adept_Transmuter
-     - Repair_Factory
+    - Aspen_Enrichment
+    - Cypress_Enrichment
+    - Pine_Enrichment
+    - Upgrade_to_Adept_Transmuter
+    - Repair_Factory
   adepttransmuter:
     type: FCCUPGRADE
     name: Adept Transmuter
     recipes:
-     - Aspen_Enrichment
-     - Cypress_Enrichment
-     - Pine_Enrichment
-     - Lead_Enrichment
-     - Copper_Enrichment
-     - Tin_Enrichment
-     - Upgrade_to_Grandmaster_Transmuter
-     - Repair_Advanced_Factory
+    - Aspen_Enrichment
+    - Cypress_Enrichment
+    - Pine_Enrichment
+    - Lead_Enrichment
+    - Copper_Enrichment
+    - Tin_Enrichment
+    - Upgrade_to_Grandmaster_Transmuter
+    - Repair_Advanced_Factory
   grandmastertransmuter:
     type: FCCUPGRADE
     name: Grandmaster Transmuter
     recipes:
-     - Aspen_Enrichment
-     - Cypress_Enrichment
-     - Pine_Enrichment
-     - Lead_Enrichment
-     - Copper_Enrichment
-     - Tin_Enrichment
-     - Amethyst_Enrichment
-     - Topaz_Enrichment
-     - Ruby_Enrichment
-     - Repair_Expert_Factory
-     
-
-#Pipes     
+    - Aspen_Enrichment
+    - Cypress_Enrichment
+    - Pine_Enrichment
+    - Lead_Enrichment
+    - Copper_Enrichment
+    - Tin_Enrichment
+    - Amethyst_Enrichment
+    - Topaz_Enrichment
+    - Ruby_Enrichment
+    - Repair_Expert_Factory
   normalpipe:
     type: PIPE
     name: Standard Pipe
-    setupcost: 
+    setupcost:
       redstone:
         material: REDSTONE
         amount: 48
@@ -1235,7 +1189,7 @@ factories:
   betterpipe:
     type: PIPE
     name: Improved Pipe
-    setupcost: 
+    setupcost:
       redstone:
         material: REDSTONE
         amount: 384
@@ -1245,8 +1199,6 @@ factories:
     transfer_time_multiplier: 10
     transfer_amount: 24
     glass_color: 2
-
-#Sorters
   sortera:
     type: SORTER
     name: Standard Sorter
@@ -1270,78 +1222,72 @@ factories:
     sort_time: 1s
     sort_amount: 64
     maximum_materials_per_side: 10
-    
 recipes:
-# lvl 1
   Repair_Rudimentary_Factory:
     type: REPAIR
     name: Repair Factory
     production_time: 30s
     input:
       eye of ender:
-        material: EYE_OF_ENDER 
+        material: EYE_OF_ENDER
         lore:
-         - Essence
+        - Essence
         enchants:
           dura:
             enchant: DURABILITY
         amount: 35
     health_gained: 3334
-# lvl 2
   Repair_Basic_Factory:
     type: REPAIR
     name: Repair Factory
     production_time: 40s
     input:
       eye of ender:
-        material: EYE_OF_ENDER 
+        material: EYE_OF_ENDER
         lore:
-         - Essence
+        - Essence
         enchants:
           dura:
             enchant: DURABILITY
         amount: 53
     health_gained: 3334
-# lvl 3
   Repair_Factory:
     type: REPAIR
     name: Repair Factory
     production_time: 50s
     input:
       eye of ender:
-        material: EYE_OF_ENDER 
+        material: EYE_OF_ENDER
         lore:
-         - Essence
+        - Essence
         enchants:
           dura:
             enchant: DURABILITY
         amount: 70
     health_gained: 3334
-# lvl 4
   Repair_Advanced_Factory:
     type: REPAIR
     name: Repair Advanced Factory
     production_time: 60s
     input:
       eye of ender:
-        material: EYE_OF_ENDER 
+        material: EYE_OF_ENDER
         lore:
-         - Essence
+        - Essence
         enchants:
           dura:
             enchant: DURABILITY
         amount: 140
     health_gained: 3334
-# lvl 5
   Repair_Expert_Factory:
     type: REPAIR
     name: Repair Expert Factory
     production_time: 90s
     input:
       eye of ender:
-        material: EYE_OF_ENDER 
+        material: EYE_OF_ENDER
         lore:
-         - Essence
+        - Essence
         enchants:
           dura:
             enchant: DURABILITY
@@ -1561,8 +1507,8 @@ recipes:
         lore:
         - Crate
     compact_lore: Compacted Item
-    excluded_materials: 
-     - BOOK
+    excluded_materials:
+    - BOOK
   Compact_Stack_Basic:
     type: COMPACT
     name: Compact Stack
@@ -1573,8 +1519,8 @@ recipes:
         lore:
         - Crate
     compact_lore: Compacted Item
-    excluded_materials: 
-     - BOOK
+    excluded_materials:
+    - BOOK
   Convert_Normal_Sand_to_Red_Sand:
     type: PRODUCTION
     name: Extract Red Sand
@@ -2467,7 +2413,7 @@ recipes:
         material: WATER_BUCKET
         amount: 1
     outputs:
-      1:
+      '1':
         chance: 0.08
         poppy:
           material: RED_ROSE
@@ -2476,7 +2422,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      2:
+      '2':
         chance: 0.08
         blueorchid:
           material: RED_ROSE
@@ -2485,7 +2431,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      3:
+      '3':
         chance: 0.08
         allium:
           material: RED_ROSE
@@ -2494,7 +2440,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      4:
+      '4':
         chance: 0.08
         azurebluet:
           material: RED_ROSE
@@ -2503,7 +2449,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      5:
+      '5':
         chance: 0.08
         redtulip:
           material: RED_ROSE
@@ -2512,7 +2458,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      6:
+      '6':
         chance: 0.08
         orangetulip:
           material: RED_ROSE
@@ -2521,7 +2467,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      7:
+      '7':
         chance: 0.08
         whitetulip:
           material: RED_ROSE
@@ -2530,7 +2476,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      8:
+      '8':
         chance: 0.08
         pinktulip:
           material: RED_ROSE
@@ -2539,7 +2485,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      9:
+      '9':
         chance: 0.08
         oxeyedaisy:
           material: RED_ROSE
@@ -2548,7 +2494,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      10:
+      '10':
         chance: 0.08
         yellowflower:
           material: YELLOW_FLOWER
@@ -2556,7 +2502,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      11:
+      '11':
         chance: 0.025
         sunflower:
           material: DOUBLE_PLANT
@@ -2565,7 +2511,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      12:
+      '12':
         chance: 0.025
         lilac:
           material: DOUBLE_PLANT
@@ -2574,7 +2520,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      13:
+      '13':
         chance: 0.025
         rosebush:
           material: DOUBLE_PLANT
@@ -2583,7 +2529,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      14:
+      '14':
         chance: 0.025
         peony:
           material: DOUBLE_PLANT
@@ -2608,42 +2554,42 @@ recipes:
       pretzel:
         material: CAKE
         lore:
-         - Food Concentrate
+        - Food Concentrate
       soup:
         material: MUSHROOM_SOUP
         lore:
-         - Soup Concentrate 
+        - Soup Concentrate
       sand:
         material: SAND
         lore:
-         - Desert Concentrate
+        - Desert Concentrate
         durability: 1
       brick:
         material: NETHER_BRICK_ITEM
         lore:
-         - Hell Concentrate
+        - Hell Concentrate
       end:
         material: ENDER_PEARL
         lore:
-         - End Concentrate
+        - End Concentrate
       rainbow:
         material: INK_SACK
         durability: 4
         lore:
-         - Rainbow Concentrate
+        - Rainbow Concentrate
       cave:
         material: COAL_ORE
         lore:
-         - Cave Concentrate
+        - Cave Concentrate
       nature:
         material: SAPLING
         lore:
-         - Nature Concentrate
+        - Nature Concentrate
         durability: 3
       ocean:
         material: INK_SACK
         lore:
-         - Ocean Concentrate
+        - Ocean Concentrate
     output:
       bastion:
         material: SPONGE
@@ -3654,7 +3600,7 @@ recipes:
         material: WATER_BUCKET
         amount: 1
     outputs:
-      1:
+      '1':
         chance: 0.143
         oaksapling:
           material: SAPLING
@@ -3663,7 +3609,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      2:
+      '2':
         chance: 0.143
         sprucesapling:
           material: SAPLING
@@ -3672,7 +3618,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      3:
+      '3':
         chance: 0.143
         birchsapling:
           material: SAPLING
@@ -3681,7 +3627,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      4:
+      '4':
         chance: 0.143
         junglesapling:
           material: SAPLING
@@ -3690,7 +3636,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      5:
+      '5':
         chance: 0.143
         acaciasapling:
           material: SAPLING
@@ -3699,7 +3645,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      6:
+      '6':
         chance: 0.143
         darkoaksapling:
           material: SAPLING
@@ -3708,12 +3654,12 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      7:
+      '7':
         chance: 0.142
         tallfern:
           material: DOUBLE_PLANT
           amount: 32
-          durability: 3         
+          durability: 3
         emptybucket:
           material: BUCKET
           amount: 1
@@ -3733,7 +3679,7 @@ recipes:
         material: WATER_BUCKET
         amount: 1
     outputs:
-      1:
+      '1':
         chance: 0.125
         oakleaves:
           material: LEAVES
@@ -3742,7 +3688,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      2:
+      '2':
         chance: 0.125
         spruceleaves:
           material: LEAVES
@@ -3751,7 +3697,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      3:
+      '3':
         chance: 0.125
         birchleaves:
           material: LEAVES
@@ -3760,7 +3706,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      4:
+      '4':
         chance: 0.125
         jungleleaves:
           material: LEAVES
@@ -3769,7 +3715,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      5:
+      '5':
         chance: 0.125
         acacialeaves:
           material: LEAVES_2
@@ -3778,7 +3724,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      6:
+      '6':
         chance: 0.125
         darkoakleaves:
           material: LEAVES_2
@@ -3787,7 +3733,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      7:
+      '7':
         chance: 0.125
         deadbush:
           material: DEAD_BUSH
@@ -3796,7 +3742,7 @@ recipes:
         emptybucket:
           material: BUCKET
           amount: 1
-      8:
+      '8':
         chance: 0.125
         tallgrass:
           material: DOUBLE_PLANT
@@ -4323,7 +4269,7 @@ recipes:
       Quartz Block:
         material: QUARTZ_BLOCK
         amount: 2048
-      quartz: 
+      quartz:
         material: QUARTZ
         amount: 1024
       pick:
@@ -4365,50 +4311,50 @@ recipes:
         material: CAKE
         amount: 20
         lore:
-         - Food Concentrate
+        - Food Concentrate
       soup:
         material: MUSHROOM_SOUP
         amount: 20
         lore:
-         - Soup Concentrate 
+        - Soup Concentrate
       sand:
         material: SAND
         amount: 20
         lore:
-         - Desert Concentrate
+        - Desert Concentrate
         durability: 1
       brick:
         material: NETHER_BRICK_ITEM
         amount: 20
         lore:
-         - Hell Concentrate
+        - Hell Concentrate
       end:
         material: ENDER_PEARL
         amount: 20
         lore:
-         - End Concentrate
+        - End Concentrate
       rainbow:
         material: INK_SACK
         amount: 20
         durability: 4
         lore:
-         - Rainbow Concentrate
+        - Rainbow Concentrate
       cave:
         material: COAL_ORE
         amount: 20
         lore:
-         - Cave Concentrate
+        - Cave Concentrate
       nature:
         material: SAPLING
         amount: 20
         lore:
-         - Nature Concentrate
+        - Nature Concentrate
         durability: 3
       ocean:
         material: INK_SACK
         amount: 20
         lore:
-         - Ocean Concentrate
+        - Ocean Concentrate
     factory: Bastion Factory
   Upgrade_to_Bio_Lab:
     production_time: 2h
@@ -4517,7 +4463,7 @@ recipes:
         material: CHEST
         amount: 256
         lore:
-         - Crate
+        - Crate
     factory: Compactor Basic
   Upgrade_to_Dedicated_Compactor:
     production_time: 1h
@@ -4526,7 +4472,7 @@ recipes:
     fuel_consumption_intervall: 30s
     input:
       piston:
-        material: PISTON_STICKY_BASE 
+        material: PISTON_STICKY_BASE
         amount: 512
       chest:
         material: CHEST
@@ -4541,7 +4487,7 @@ recipes:
         material: CHEST
         amount: 512
         lore:
-         - Crate
+        - Crate
     factory: Dedicated Compactor
   Upgrade_to_Dedicated_De-Compactor:
     production_time: 1h
@@ -4550,7 +4496,7 @@ recipes:
     fuel_consumption_intervall: 30s
     input:
       piston:
-        material: PISTON_STICKY_BASE 
+        material: PISTON_STICKY_BASE
         amount: 512
       chest:
         material: CHEST
@@ -4565,7 +4511,7 @@ recipes:
         material: CHEST
         amount: 512
         lore:
-         - Crate
+        - Crate
     factory: Dedicated De-Compactor
   Upgrade_to_Diamond_Armour_Forge:
     production_time: 2h
@@ -4767,7 +4713,7 @@ recipes:
       dye15:
         material: INK_SACK
         amount: 128
-        durability: 15        
+        durability: 15
     factory: Glass Dying Factory
   Upgrade_to_Gold_Equipment_Forge:
     production_time: 30m
@@ -4932,7 +4878,7 @@ recipes:
         amount: 384
       lava:
         material: LAVA_BUCKET
-        amount: 24  
+        amount: 24
     factory: Steel Forge
   Upgrade_to_Iron_Forge_Basic:
     production_time: 1800s
@@ -4996,7 +4942,6 @@ recipes:
       lavabucket:
         material: LAVA_BUCKET
         amount: 16
-      
     factory: Netherbrick Smelter
   Upgrade_to_Ore_Smelter:
     production_time: 900s
@@ -5039,7 +4984,7 @@ recipes:
       grass:
         material: GRASS
         amount: 1024
-      dirt: 
+      dirt:
         material: DIRT
         amount: 1024
       water:
@@ -5088,7 +5033,6 @@ recipes:
         material: WOOD
         durability: -1
         amount: 1024
-        
     factory: Rail Factory
   Upgrade_to_Redstone_Circularity_Factory:
     production_time: 1800s
@@ -5199,7 +5143,7 @@ recipes:
       rabbit:
         material: RABBIT
         amount: 256
-      bowl: 
+      bowl:
         material: BOWL
         amount: 128
       fire:
@@ -5229,7 +5173,7 @@ recipes:
         material: BRICK
         amount: 108
         lore:
-         - Compacted Item
+        - Compacted Item
       picks:
         material: DIAMOND_PICKAXE
         amount: 12
@@ -5277,7 +5221,7 @@ recipes:
         material: STONE
         amount: 108
         lore:
-         - Compacted Item
+        - Compacted Item
       otherstone:
         material: STONE
         durability: 1
@@ -5329,12 +5273,12 @@ recipes:
         material: GLASS
         amount: 8
         lore:
-         - Compacted Item
+        - Compacted Item
       netherquartzore:
         material: QUARTZ_ORE
         amount: 10
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Advanced_Pylon:
     type: UPGRADE
     name: Upgrade to Advanced Pylon
@@ -5358,12 +5302,12 @@ recipes:
         material: GLASS
         amount: 32
         lore:
-         - Compacted Item
+        - Compacted Item
       netherquartzore:
         material: QUARTZ_ORE
         amount: 20
         lore:
-         - Compacted Item
+        - Compacted Item
       emerald:
         material: EMERALD_BLOCK
         amount: 42
@@ -5371,13 +5315,13 @@ recipes:
         material: STONE
         amount: 32
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedlogs:
         material: LOG
         amount: 32
         durability: -1
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Expert_Pylon:
     type: UPGRADE
     name: Upgrade to Expert Pylon
@@ -5401,72 +5345,69 @@ recipes:
         material: GLASS
         amount: 64
         lore:
-         - Compacted Item
+        - Compacted Item
       netherquartzore:
         material: QUARTZ_ORE
         amount: 32
         lore:
-         - Compacted Item
+        - Compacted Item
       emerald:
         material: EMERALD_BLOCK
         amount: 12
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedstone:
         material: STONE
         amount: 512
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedlogs1:
         material: LOG
         amount: 10
         durability: 0
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedlogs2:
         material: LOG
         amount: 10
         durability: 1
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedlogs3:
         material: LOG
         amount: 10
         durability: 2
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedlogs4:
         material: LOG
         amount: 10
         durability: 3
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedlogs5:
         material: LOG_2
         amount: 10
         durability: 0
         lore:
-         - Compacted Item
+        - Compacted Item
       compactedlogs6:
         material: LOG_2
         amount: 10
         durability: 1
         lore:
-         - Compacted Item
-        
-#Pylon recipes
+        - Compacted Item
   Pylon_Basic:
     name: Extract Aether
     type: PYLON
     production_time: 4h
     fuel_consumption_intervall: 6m
-    input:
     output:
       aether:
         material: GOLD_NUGGET
         amount: 10
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -5476,13 +5417,12 @@ recipes:
     type: PYLON
     fuel_consumption_intervall: 6m
     production_time: 2h
-    input:
     output:
       aether:
         material: GOLD_NUGGET
         amount: 14
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -5492,20 +5432,16 @@ recipes:
     type: PYLON
     fuel_consumption_intervall: 6m
     production_time: 2h
-    input:
     output:
       aether:
         material: GOLD_NUGGET
         amount: 20
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
     weight: 20
-
-
-#Pylon repair recipes 
   Repair_Basic_Pylon:
     type: REPAIR
     name: Repair Basic Pylon
@@ -5533,12 +5469,11 @@ recipes:
         material: EMERALD_BLOCK
         amount: 38
     health_gained: 1250
-#Bastion recipes
   Brew_Soup_Concentrate:
     name: Brew Soup Concentrate
     type: PRODUCTION
     production_time: 15s
-    input: 
+    input:
       wood:
         material: WOOD
         amount: 128
@@ -5559,7 +5494,7 @@ recipes:
       soup:
         material: MUSHROOM_SOUP
         lore:
-         - Soup Concentrate 
+        - Soup Concentrate
   Bake_Food_Concentrate:
     name: Bake Food Concentrate
     type: PRODUCTION
@@ -5584,12 +5519,12 @@ recipes:
       pretzel:
         material: CAKE
         lore:
-         - Food Concentrate
+        - Food Concentrate
   Sieve_Desert_Concentrate:
     name: Sieve Desert Concentrate
     type: PRODUCTION
     production_time: 15s
-    input: 
+    input:
       sand:
         material: SAND
         amount: 512
@@ -5604,14 +5539,14 @@ recipes:
       sand:
         material: SAND
         lore:
-         - Desert Concentrate
+        - Desert Concentrate
         durability: 1
   Craft_Hell_Concentrate:
     name: Craft Hell Concentrate
     type: PRODUCTION
     production_time: 15s
     input:
-      netherrack: 
+      netherrack:
         material: NETHERRACK
         amount: 768
       slow:
@@ -5624,7 +5559,7 @@ recipes:
       brick:
         material: NETHER_BRICK_ITEM
         lore:
-         - Hell Concentrate
+        - Hell Concentrate
   Craft_End_Concentrate:
     name: Craft End Concentrate
     type: PRODUCTION
@@ -5640,7 +5575,7 @@ recipes:
       concentrate:
         material: ENDER_PEARL
         lore:
-         - End Concentrate
+        - End Concentrate
   Concentrate_Rainbow:
     name: Concentrate Rainbow
     type: PRODUCTION
@@ -5650,7 +5585,7 @@ recipes:
         material: INK_SACK
         durability: 4
         lore:
-         - Rainbow Concentrate
+        - Rainbow Concentrate
     input:
       dye0:
         material: INK_SACK
@@ -5715,7 +5650,7 @@ recipes:
       dye15:
         material: INK_SACK
         amount: 32
-        durability: 15        
+        durability: 15
   Craft_Cave_Concentrate:
     name: Craft Cave Concentrate
     type: PRODUCTION
@@ -5737,12 +5672,12 @@ recipes:
       concentrate:
         material: COAL_ORE
         lore:
-         - Cave Concentrate
+        - Cave Concentrate
   Grow_Concentrate_Of_Nature:
     name: Grow Nature Concentrate
     type: PRODUCTION
     production_time: 15s
-    input: 
+    input:
       sapling1:
         material: SAPLING
         amount: 32
@@ -5771,7 +5706,7 @@ recipes:
       concentrate:
         material: SAPLING
         lore:
-         - Nature Concentrate
+        - Nature Concentrate
         durability: 3
   Craft_Concentrate_Of_Ocean:
     name: Craft Ocean Concentrate
@@ -5791,9 +5726,7 @@ recipes:
       ocean:
         material: INK_SACK
         lore:
-         - Ocean Concentrate
-        
-#Dying recipes
+        - Ocean Concentrate
   Dye_Glass_White:
     name: Dye Glass White
     type: PRODUCTION
@@ -6660,17 +6593,11 @@ recipes:
         material: COMPASS
         amount: 1
         lore:
-         - Shows all Active,
-         - Inactive and Upgrading Pylons
+        - Shows all Active,
+        - Inactive and Upgrading Pylons
         enchants:
           dura:
             enchant: DURABILITY
-
-            
-            
-## XP Generation Recipes
-# Upgrades
-
   Upgrade_to_Apprentice_Transmuter:
     production_time: 1h
     type: UPGRADE
@@ -6686,7 +6613,7 @@ recipes:
         material: GOLD_NUGGET
         amount: 180
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6704,7 +6631,7 @@ recipes:
         material: GOLD_NUGGET
         amount: 500
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6725,17 +6652,14 @@ recipes:
         material: GOLD_NUGGET
         amount: 78
         lore:
-         - Aether
-         - Compacted Item
+        - Aether
+        - Compacted Item
         enchants:
           dura:
             enchant: DURABILITY
       xp:
         material: EMERALD_BLOCK
         amount: 384
-
-# Enrichments
-
   Aspen_Enrichment:
     name: Aspen Enrichment
     type: PRODUCTION
@@ -6756,7 +6680,7 @@ recipes:
         material: GOLD_NUGGET
         amount: 4
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6784,7 +6708,7 @@ recipes:
         material: GOLD_NUGGET
         amount: 4
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6812,7 +6736,7 @@ recipes:
         material: GOLD_NUGGET
         amount: 4
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6820,7 +6744,6 @@ recipes:
       xp:
         material: EMERALD
         amount: 20
-
   Lead_Enrichment:
     name: Lead Enrichment
     type: PRODUCTION
@@ -6840,14 +6763,11 @@ recipes:
       melons:
         material: MELON_BLOCK
         amount: 128
-#      chicken:
-#        material: RAW_CHICKEN
-#        amount: 32
       aether:
         material: GOLD_NUGGET
         amount: 21
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6875,14 +6795,11 @@ recipes:
         material: INK_SACK
         amount: 256
         durability: 3
-#      beef:
-#        material: RAW_BEEF
-#        amount: 32
       aether:
         material: GOLD_NUGGET
         amount: 21
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6909,14 +6826,11 @@ recipes:
       pumpkins:
         material: PUMPKIN
         amount: 128
-#      pork:
-#        material: PORK
-#        amount: 32
       aether:
         material: GOLD_NUGGET
         amount: 21
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6924,7 +6838,6 @@ recipes:
       xp:
         material: EMERALD_BLOCK
         amount: 19
-
   Amethyst_Enrichment:
     name: Amethyst Enrichment
     type: PRODUCTION
@@ -6935,32 +6848,29 @@ recipes:
         material: WHEAT
         amount: 25
         lore:
-         - Compacted Item
+        - Compacted Item
       acacialogs:
         material: LOG_2
         amount: 6
         durability: 0
         lore:
-         - Compacted Item
+        - Compacted Item
       junglesaplings:
         material: SAPLING
         amount: 2
         durability: 3
         lore:
-         - Compacted Item
+        - Compacted Item
       netherwart:
         material: NETHER_STALK
         amount: 15
         lore:
-         - Compacted Item
+        - Compacted Item
       melons:
         material: MELON_BLOCK
         amount: 10
         lore:
-         - Compacted Item
-#      chicken:
-#        material: RAW_CHICKEN
-#        amount: 160
+        - Compacted Item
       inksacs:
         material: INK_SACK
         amount: 64
@@ -6971,7 +6881,7 @@ recipes:
         material: GOLD_NUGGET
         amount: 120
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -6989,13 +6899,13 @@ recipes:
         material: CARROT_ITEM
         amount: 25
         lore:
-         - Compacted Item
+        - Compacted Item
       sprucelogs:
         material: LOG
         amount: 6
         durability: 1
         lore:
-         - Compacted Item
+        - Compacted Item
       darkoaksaplings:
         material: SAPLING
         amount: 32
@@ -7004,16 +6914,13 @@ recipes:
         material: CACTUS
         amount: 25
         lore:
-         - Compacted Item
+        - Compacted Item
       cocoa:
         material: INK_SACK
         amount: 20
         durability: 3
         lore:
-         - Compacted Item
-#      beef:
-#        material: RAW_BEEF
-#        amount: 160
+        - Compacted Item
       clownfish:
         material: RAW_FISH
         amount: 3
@@ -7022,12 +6929,12 @@ recipes:
         material: EGG
         amount: 8
         lore:
-         - Compacted Item
+        - Compacted Item
       aether:
         material: GOLD_NUGGET
         amount: 120
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -7045,32 +6952,29 @@ recipes:
         material: POTATO_ITEM
         amount: 25
         lore:
-         - Compacted Item
+        - Compacted Item
       birchlogs:
         material: LOG
         amount: 6
         durability: 2
         lore:
-         - Compacted Item
+        - Compacted Item
       oaksaplings:
         material: SAPLING
         amount: 2
         durability: 0
         lore:
-         - Compacted Item
+        - Compacted Item
       sugarcane:
         material: SUGAR_CANE
         amount: 25
         lore:
-         - Compacted Item
+        - Compacted Item
       pumpkins:
         material: PUMPKIN
         amount: 10
         lore:
-         - Compacted Item
-#      pork:
-#        material: PORK
-#        amount: 160
+        - Compacted Item
       salmon:
         material: RAW_FISH
         amount: 19
@@ -7079,12 +6983,12 @@ recipes:
         material: VINE
         amount: 6
         lore:
-         - Compacted Item
+        - Compacted Item
       aether:
         material: GOLD_NUGGET
         amount: 120
         lore:
-         - Aether
+        - Aether
         enchants:
           dura:
             enchant: DURABILITY
@@ -7092,9 +6996,6 @@ recipes:
       xp:
         material: EMERALD_BLOCK
         amount: 140
-##Enchanting Recipes
-#Upgrades
-
   Upgrade_to_Basic_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7126,7 +7027,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 16
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_River_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7148,7 +7049,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 12
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Magic_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7170,7 +7071,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 23
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Mithril_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7202,7 +7103,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 23
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Archer_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7234,7 +7135,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 21
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Dagger_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7266,7 +7167,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 23
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Quick_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7298,7 +7199,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 16
         lore:
-         - Compacted Item
+        - Compacted Item
   Upgrade_to_Rock_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7330,9 +7231,7 @@ recipes:
         material: EMERALD_BLOCK
         amount: 18
         lore:
-         - Compacted Item
-#FireProtection
-
+        - Compacted Item
   Enchant_Helmet_FireP_I:
     type: ENCHANT
     name: Enchant Helmet with Fire Protection I
@@ -7725,8 +7624,6 @@ recipes:
           fireprot1:
             enchant: PROTECTION_FIRE
             level: 5
-#Flame
-
   Enchant_Flame_I:
     type: ENCHANT
     name: Enchant Bow with Flame I
@@ -7740,8 +7637,6 @@ recipes:
     enchant_item:
       bow:
         material: BOW
-#Fire Aspect
-
   Enchant_FireAspect_I:
     type: ENCHANT
     name: Enchant Sword with Fire Aspect I
@@ -7771,9 +7666,7 @@ recipes:
         enchants:
           fireaspect1:
             enchant: FIRE_ASPECT
-            level: 1  
-#Depth Strider
-
+            level: 1
   Enchant_DepthStrider_I:
     type: ENCHANT
     name: Enchant Boots with Depth Strider I
@@ -7821,8 +7714,6 @@ recipes:
           depthstrider2:
             enchant: DEPTH_STRIDER
             level: 2
-#Respiration
-
   Enchant_Respiration_I:
     type: ENCHANT
     name: Enchant Helmet with Respiration I
@@ -7870,8 +7761,6 @@ recipes:
           respiration2:
             enchant: OXYGEN
             level: 2
-#Frost Walker
-
   Enchant_Frost_Walker_I:
     type: ENCHANT
     name: Enchant Boots with Frost Walker I
@@ -7885,7 +7774,6 @@ recipes:
     enchant_item:
       boots:
         material: DIAMOND_BOOTS
-  
   Enchant_Frost_Walker_II:
     type: ENCHANT
     name: Enchant Boots with Frost Walker II
@@ -7899,8 +7787,6 @@ recipes:
     enchant_item:
       boots:
         material: DIAMOND_BOOTS
-#Aqua Affinity
-
   Enchant_AquaAffinity_I:
     type: ENCHANT
     name: Enchant Helmet with Aqua Affinity
@@ -7914,8 +7800,6 @@ recipes:
     enchant_item:
       helmet:
         material: DIAMOND_HELMET
-#Feather Falling
-
   Enchant_FeatherFalling_I:
     type: ENCHANT
     name: Enchant Boots with FeatherFalling I
@@ -7980,8 +7864,6 @@ recipes:
           featherfalling3:
             enchant: PROTECTION_FALL
             level: 3
-#BOA
-
   Enchant_BOA_I:
     type: ENCHANT
     name: Enchant Sword with Bane of Arthropods I
@@ -8063,8 +7945,6 @@ recipes:
           baneofarthropods4:
             enchant: DAMAGE_ARTHROPODS
             level: 4
-#Infinity
-
   Enchant_Infinity_I:
     name: Enchant Bow with Infinity
     type: ENCHANT
@@ -8078,8 +7958,6 @@ recipes:
     enchant_item:
       bow:
         material: BOW
-#Silk Touch
-
   Enchant_Pickaxe_SilkTouch_I:
     type: ENCHANT
     name: Enchant Pickaxe with Silk Touch
@@ -8119,8 +7997,6 @@ recipes:
     enchant_item:
       pickaxe:
         material: DIAMOND_SPADE
-#Protection
-
   Enchant_Helmet_Protection_I:
     type: ENCHANT
     name: Enchant Helmet with Protection I
@@ -8377,8 +8253,6 @@ recipes:
           fireprot1:
             enchant: PROTECTION_ENVIRONMENTAL
             level: 3
-#BlastProtectionrotection
-
   Enchant_Helmet_BlastProtection_I:
     type: ENCHANT
     name: Enchant Helmet with Blast Protection I
@@ -8635,8 +8509,6 @@ recipes:
           blastprot1:
             enchant: PROTECTION_EXPLOSIONS
             level: 3
-#Thorns
-
   Enchant_Thorns_I:
     type: ENCHANT
     name: Enchant Chestplate with Thorns I
@@ -8684,8 +8556,6 @@ recipes:
           thorns2:
             enchant: THORNS
             level: 2
-#Power
-
   Enchant_Power_I:
     type: ENCHANT
     name: Enchant Bow with Power I
@@ -8767,8 +8637,6 @@ recipes:
           power4:
             enchant: ARROW_DAMAGE
             level: 4
-#Projectile Protection
-
   Enchant_Helmet_ProjectileProtection_I:
     type: ENCHANT
     name: Enchant Helmet with Projectile Protection I
@@ -9025,8 +8893,6 @@ recipes:
           projprot1:
             enchant: PROTECTION_PROJECTILE
             level: 3
-#Punch
-
   Enchant_Punch_I:
     type: ENCHANT
     name: Enchant Bow with Punch I
@@ -9057,8 +8923,6 @@ recipes:
           power1:
             enchant: ARROW_KNOCKBACK
             level: 1
-#Sharpness
-
   Enchant_Sharpness_I:
     type: ENCHANT
     name: Enchant Sword with Sharpness I
@@ -9140,8 +9004,6 @@ recipes:
           sharpness4:
             enchant: DAMAGE_ALL
             level: 4
-#Smite
-
   Enchant_Smite_I:
     type: ENCHANT
     name: Enchant Sword with Smite I
@@ -9223,8 +9085,6 @@ recipes:
           smite4:
             enchant: DAMAGE_UNDEAD
             level: 4
-#Knockback
-
   Enchant_Knockback_I:
     type: ENCHANT
     name: Enchant Sword with Knockback I
@@ -9255,9 +9115,6 @@ recipes:
           knockback1:
             enchant: KNOCKBACK
             level: 1
-            
-#Efficiency
-
   Enchant_Pickaxe_Efficiency_I:
     type: ENCHANT
     name: Enchant Pickaxe with Efficiency I
@@ -9501,8 +9358,6 @@ recipes:
           eff4:
             enchant: DIG_SPEED
             level: 4
-#Unbreaking Tools
-
   Enchant_Pickaxe_Unbreaking_I:
     type: ENCHANT
     name: Enchant Pickaxe with Unbreaking I
@@ -9644,8 +9499,6 @@ recipes:
           ub2:
             enchant: DURABILITY
             level: 2
-#Unbreaking Swords
-
   Enchant_Sword_Unbreaking_I:
     type: ENCHANT
     name: Enchant Sword with Unbreaking I
@@ -9693,8 +9546,6 @@ recipes:
           ub2:
             enchant: DURABILITY
             level: 2
-#Unbreaking Bows
-
   Enchant_Bow_Unbreaking_I:
     type: ENCHANT
     name: Enchant Bow with Unbreaking I
@@ -9742,8 +9593,6 @@ recipes:
           ub2:
             enchant: DURABILITY
             level: 2
-#Unbreaking Armour/Shield
-
   Enchant_Helmet_Unbreaking_I:
     type: ENCHANT
     name: Enchant Helmet with Unbreaking I
@@ -9979,8 +9828,6 @@ recipes:
           ub2:
             enchant: DURABILITY
             level: 2
-#Basic Enchantments
-
   Enchant_Efficiency_Pickaxe_Basic:
     type: ENCHANT
     name: Enchant Pickaxe with Efficiency
@@ -10085,7 +9932,6 @@ recipes:
     enchant_item:
       armor:
         material: DIAMOND_SWORD
-#Fossils
   Break_Fossil_Basic:
     type: RANDOM
     name: Break Fossil
@@ -10096,40 +9942,40 @@ recipes:
         material: FLINT
         amount: 1
         lore:
-          - Fossil
+        - Fossil
     outputs:
       god1:
-        chance: 0.000001
+        chance: 1.0E-8
         dragonegg:
           material: DRAGON_EGG
           amount: 1
           lore:
-           - Egg of Creation
+          - Egg of Creation
       god2:
-        chance: 0.0004081
+        chance: 4.0909E-4
         ancientnote:
           material: PAPER
           amount: 1
           lore:
-           - Gezo was here !!!
+          - Gezo was here !!!
       god3:
-        chance: 0.00040909
+        chance: 4.0909E-4
         clockback:
           material: WATCH
           amount: 1
           lore:
-           - Clockback
+          - Clockback
           enchants:
             kb:
               enchant: KNOCKBACK
               level: 3
       god4:
-        chance: 0.00040909
+        chance: 4.0909E-4
         apollosbow:
           material: BOW
           amount: 1
           lore:
-           - Apollo's Bow
+          - Apollo's Bow
           enchants:
             power:
               enchant: ARROW_DAMAGE
@@ -10144,12 +9990,12 @@ recipes:
               enchant: ARROW_INFINITE
               level: 1
       god5:
-        chance: 0.00040909
+        chance: 4.0909E-4
         imcandopickaxe:
           material: DIAMOND_PICKAXE
           amount: 1
           lore:
-           - Imcando Pickaxe
+          - Imcando Pickaxe
           enchants:
             efficiency:
               enchant: DIG_SPEED
@@ -10226,331 +10072,410 @@ recipes:
           material: DIAMOND_BARDING
           amount: 1
       high2:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: SPONGE
           amount: 1
       high3:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_PICKAXE
           amount: 1
       high4:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_AXE
           amount: 1
       high5:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_SPADE
           amount: 1
       high6:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_CHESTPLATE
           amount: 1
       high7:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_LEGGINGS
           amount: 1
       high8:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_HELMET
           amount: 1
       high9:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_BOOTS
           amount: 1
       high10:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: IRON_INGOT
           amount: 64
       high11:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_BLOCK
           amount: 1
       high12:
-        chance: 0.0037038
+        chance: 0.0037037
         creeper:
           material: MONSTER_EGG
           amount: 1
           durability: 50
+          nbt:
+            EntityTag:
+              id: Creeper
       high13:
-        chance: 0.0037038
-        creeper:
+        chance: 0.0037037
+        zombie:
           material: MONSTER_EGG
           amount: 1
           durability: 54
+          nbt:
+            EntityTag:
+              id: Zombie
       high14:
-        chance: 0.0037038
+        chance: 0.0037037
         skeleton:
           material: MONSTER_EGG
           amount: 1
           durability: 51
+          nbt:
+            EntityTag:
+              id: Skeleton
+              SkeletonType: 0
+              HandItems:
+              - id: bow
       high15:
-        chance: 0.0037038
+        chance: 0.0037037
         spider:
           material: MONSTER_EGG
           amount: 1
           durability: 52
+          nbt:
+            EntityTag:
+              id: Spider
       high16:
-        chance: 0.0037038
+        chance: 0.0037037
         blaze:
           material: MONSTER_EGG
           amount: 1
           durability: 61
+          nbt:
+            EntityTag:
+              id: Blaze
       high17:
-        chance: 0.0037038
+        chance: 0.0037037
         ghast:
           material: MONSTER_EGG
           amount: 1
           durability: 56
+          nbt:
+            EntityTag:
+              id: Ghast
       high18:
-        chance: 0.0037038
+        chance: 0.0037037
         guardian:
           material: MONSTER_EGG
           amount: 1
           durability: 68
+          nbt:
+            EntityTag:
+              id: Guardian
       high19:
-        chance: 0.0037038
+        chance: 0.0037037
         magmacube:
           material: MONSTER_EGG
           amount: 1
           durability: 62
+          nbt:
+            EntityTag:
+              id: LavaSlime
+              Size: 3
       high20:
-        chance: 0.0037038
+        chance: 0.0037037
         slime:
           material: MONSTER_EGG
           amount: 1
           durability: 55
+          nbt:
+            EntityTag:
+              id: Slime
+              Size: 3
       high21:
-        chance: 0.0037038
+        chance: 0.0037037
         witch:
           material: MONSTER_EGG
           amount: 1
           durability: 66
+          nbt:
+            EntityTag:
+              id: Witch
       high22:
-        chance: 0.0037038
+        chance: 0.0037037
         villager:
           material: MONSTER_EGG
           amount: 1
           durability: 120
+          nbt:
+            EntityTag:
+              id: Villager
       high23:
-        chance: 0.0037038
+        chance: 0.0037037
         cavespider:
           material: MONSTER_EGG
           amount: 1
           durability: 59
+          nbt:
+            EntityTag:
+              id: CaveSpider
       high24:
-        chance: 0.0037038
+        chance: 0.0037037
         enderman:
           material: MONSTER_EGG
           amount: 1
           durability: 58
+          nbt:
+            EntityTag:
+              id: Enderman
       high25:
-        chance: 0.0037038
+        chance: 0.0037037
         zombiepigman:
           material: MONSTER_EGG
           amount: 1
           durability: 57
+          nbt:
+            EntityTag:
+              id: PigZombie
       high26:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: COAL
           amount: 32
           durability: 1
           lore:
-           - Compacted Item
+          - Compacted Item
       high27:
-        chance: 0.0037012
+        chance: 0.0037037
         item:
           material: COAL_ORE
           amount: 5
           lore:
-           - Cave Concentrate
+          - Cave Concentrate
       mid1:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 90
+          nbt:
+            EntityTag:
+              id: Pig
       mid2:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 92
+          nbt:
+            EntityTag:
+              id: Cow
       mid3:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 93
+          nbt:
+            EntityTag:
+              id: Chicken
       mid4:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 94
+          nbt:
+            EntityTag:
+              id: Squid
       mid5:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: NOTE_BLOCK
           amount: 5
       mid6:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: DIAMOND
           amount: 1
       mid7:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: EMERALD_BLOCK
           amount: 1
       mid8:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: IRON_BLOCK
           amount: 1
       mid9:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: REDSTONE_BLOCK
           amount: 1
       mid10:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: LAPIS_BLOCK
           amount: 1
       mid11:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: GOLD_RECORD
           amount: 1
       mid12:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: GREEN_RECORD
           amount: 1
       mid13:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_3
           amount: 1
       mid14:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_4
           amount: 1
       mid15:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_5
           amount: 1
       mid16:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_6
           amount: 1
       mid17:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_7
           amount: 1
       mid18:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_8
           amount: 1
       mid19:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_9
           amount: 1
       mid20:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_10
           amount: 1
       mid21:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_11
           amount: 1
       mid22:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_12
           amount: 1
       mid23:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MINECART
           amount: 1
       mid24:
-        chance: 0.026176
+        chance: 0.02617647058
         mooshroom:
           material: MONSTER_EGG
           amount: 1
           durability: 96
+          nbt:
+            EntityTag:
+              id: MushroomCow
       mid25:
-        chance: 0.026176
+        chance: 0.02617647058
         horse:
           material: MONSTER_EGG
           amount: 1
           durability: 100
+          nbt:
+            EntityTag:
+              id: Horse
+              Type: 0
       mid26:
-        chance: 0.026176
+        chance: 0.02617647058
         rabbit:
           material: MONSTER_EGG
           amount: 1
           durability: 101
+          nbt:
+            EntityTag:
+              id: Rabbit
       mid27:
-        chance: 0.026176
+        chance: 0.02617647058
         ocelot:
           material: MONSTER_EGG
           amount: 1
           durability: 98
+          nbt:
+            EntityTag:
+              id: Ozelot
+              CatType: 0
       mid28:
-        chance: 0.026176
+        chance: 0.02617647058
         squid:
           material: MONSTER_EGG
           amount: 1
           durability: 94
+          nbt:
+            EntityTag:
+              id: Squid
       mid29:
-        chance: 0.026176
+        chance: 0.02617647058
         wolf:
           material: MONSTER_EGG
           amount: 1
           durability: 95
+          nbt:
+            EntityTag:
+              id: Wolf
       mid30:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: IRON_BARDING
           amount: 1
       mid31:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: BONE
           amount: 32
       mid32:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: PRISMARINE_SHARD
           amount: 5
       mid33:
-        chance: 0.026176
+        chance: 0.02617647076
         item:
           material: PRISMARINE_CRYSTALS
           amount: 3
       mid34:
-        chance: 0.026192
+        chance: 0.02617647058
         item:
           material: JUKEBOX
           amount: 1
@@ -10564,40 +10489,40 @@ recipes:
         material: FLINT
         amount: 1
         lore:
-          - Fossil
+        - Fossil
     outputs:
       god1:
-        chance: 0.000001
+        chance: 1.0E-8
         dragonegg:
           material: DRAGON_EGG
           amount: 1
           lore:
-           - Egg of Creation
+          - Egg of Creation
       god2:
-        chance: 0.0004081
+        chance: 4.0909E-4
         ancientnote:
           material: PAPER
           amount: 1
           lore:
-           - Gezo was here !!!
+          - Gezo was here !!!
       god3:
-        chance: 0.00040909
+        chance: 4.0909E-4
         clockback:
           material: WATCH
           amount: 1
           lore:
-           - Clockback
+          - Clockback
           enchants:
             kb:
               enchant: KNOCKBACK
               level: 3
       god4:
-        chance: 0.00040909
+        chance: 4.0909E-4
         apollosbow:
           material: BOW
           amount: 1
           lore:
-           - Apollo's Bow
+          - Apollo's Bow
           enchants:
             power:
               enchant: ARROW_DAMAGE
@@ -10612,12 +10537,12 @@ recipes:
               enchant: ARROW_INFINITE
               level: 1
       god5:
-        chance: 0.00040909
+        chance: 4.0909E-4
         imcandopickaxe:
           material: DIAMOND_PICKAXE
           amount: 1
           lore:
-           - Imcando Pickaxe
+          - Imcando Pickaxe
           enchants:
             efficiency:
               enchant: DIG_SPEED
@@ -10694,336 +10619,413 @@ recipes:
           material: DIAMOND_BARDING
           amount: 1
       high2:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: SPONGE
           amount: 1
       high3:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_PICKAXE
           amount: 1
       high4:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_AXE
           amount: 1
       high5:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_SPADE
           amount: 1
       high6:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_CHESTPLATE
           amount: 1
       high7:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_LEGGINGS
           amount: 1
       high8:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_HELMET
           amount: 1
       high9:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_BOOTS
           amount: 1
       high10:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: IRON_INGOT
           amount: 64
       high11:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: DIAMOND_BLOCK
           amount: 1
       high12:
-        chance: 0.0037038
+        chance: 0.0037037
         creeper:
           material: MONSTER_EGG
           amount: 1
           durability: 50
+          nbt:
+            EntityTag:
+              id: Creeper
       high13:
-        chance: 0.0037038
-        creeper:
+        chance: 0.0037037
+        zombie:
           material: MONSTER_EGG
           amount: 1
           durability: 54
+          nbt:
+            EntityTag:
+              id: Zombie
       high14:
-        chance: 0.0037038
+        chance: 0.0037037
         skeleton:
           material: MONSTER_EGG
           amount: 1
           durability: 51
+          nbt:
+            EntityTag:
+              id: Skeleton
+              SkeletonType: 0
+              HandItems:
+              - id: bow
       high15:
-        chance: 0.0037038
+        chance: 0.0037037
         spider:
           material: MONSTER_EGG
           amount: 1
           durability: 52
+          nbt:
+            EntityTag:
+              id: Spider
       high16:
-        chance: 0.0037038
+        chance: 0.0037037
         blaze:
           material: MONSTER_EGG
           amount: 1
           durability: 61
+          nbt:
+            EntityTag:
+              id: Blaze
       high17:
-        chance: 0.0037038
+        chance: 0.0037037
         ghast:
           material: MONSTER_EGG
           amount: 1
           durability: 56
+          nbt:
+            EntityTag:
+              id: Ghast
       high18:
-        chance: 0.0037038
+        chance: 0.0037037
         guardian:
           material: MONSTER_EGG
           amount: 1
           durability: 68
+          nbt:
+            EntityTag:
+              id: Guardian
       high19:
-        chance: 0.0037038
+        chance: 0.0037037
         magmacube:
           material: MONSTER_EGG
           amount: 1
           durability: 62
+          nbt:
+            EntityTag:
+              id: LavaSlime
+              Size: 3
       high20:
-        chance: 0.0037038
+        chance: 0.0037037
         slime:
           material: MONSTER_EGG
           amount: 1
           durability: 55
+          nbt:
+            EntityTag:
+              id: Slime
+              Size: 3
       high21:
-        chance: 0.0037038
+        chance: 0.0037037
         witch:
           material: MONSTER_EGG
           amount: 1
           durability: 66
+          nbt:
+            EntityTag:
+              id: Witch
       high22:
-        chance: 0.0037038
+        chance: 0.0037037
         villager:
           material: MONSTER_EGG
           amount: 1
           durability: 120
+          nbt:
+            EntityTag:
+              id: Villager
       high23:
-        chance: 0.0037038
+        chance: 0.0037037
         cavespider:
           material: MONSTER_EGG
           amount: 1
           durability: 59
+          nbt:
+            EntityTag:
+              id: CaveSpider
       high24:
-        chance: 0.0037038
+        chance: 0.0037037
         enderman:
           material: MONSTER_EGG
           amount: 1
           durability: 58
+          nbt:
+            EntityTag:
+              id: Enderman
       high25:
-        chance: 0.0037038
+        chance: 0.0037037
         zombiepigman:
           material: MONSTER_EGG
           amount: 1
           durability: 57
+          nbt:
+            EntityTag:
+              id: PigZombie
       high26:
-        chance: 0.0037038
+        chance: 0.0037037
         item:
           material: COAL
           amount: 32
           durability: 1
           lore:
-           - Compacted Item
+          - Compacted Item
       high27:
-        chance: 0.0037012
+        chance: 0.0037037
         item:
           material: COAL_ORE
           amount: 5
           lore:
-           - Cave Concentrate
+          - Cave Concentrate
       mid1:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 90
+          nbt:
+            EntityTag:
+              id: Pig
       mid2:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 92
+          nbt:
+            EntityTag:
+              id: Cow
       mid3:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 93
+          nbt:
+            EntityTag:
+              id: Chicken
       mid4:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MONSTER_EGG
           amount: 1
           durability: 94
+          nbt:
+            EntityTag:
+              id: Squid
       mid5:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: NOTE_BLOCK
           amount: 5
       mid6:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: DIAMOND
           amount: 1
       mid7:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: EMERALD_BLOCK
           amount: 1
       mid8:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: IRON_BLOCK
           amount: 1
       mid9:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: REDSTONE_BLOCK
           amount: 1
       mid10:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: LAPIS_BLOCK
           amount: 1
       mid11:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: GOLD_RECORD
           amount: 1
       mid12:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: GREEN_RECORD
           amount: 1
       mid13:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_3
           amount: 1
       mid14:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_4
           amount: 1
       mid15:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_5
           amount: 1
       mid16:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_6
           amount: 1
       mid17:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_7
           amount: 1
       mid18:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_8
           amount: 1
       mid19:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_9
           amount: 1
       mid20:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_10
           amount: 1
       mid21:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_11
           amount: 1
       mid22:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: RECORD_12
           amount: 1
       mid23:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: MINECART
           amount: 1
       mid24:
-        chance: 0.026176
+        chance: 0.02617647058
         mooshroom:
           material: MONSTER_EGG
           amount: 1
           durability: 96
+          nbt:
+            EntityTag:
+              id: MushroomCow
       mid25:
-        chance: 0.026176
+        chance: 0.02617647058
         horse:
           material: MONSTER_EGG
           amount: 1
           durability: 100
+          nbt:
+            EntityTag:
+              id: Horse
+              Type: 0
       mid26:
-        chance: 0.026176
+        chance: 0.02617647058
         rabbit:
           material: MONSTER_EGG
           amount: 1
           durability: 101
+          nbt:
+            EntityTag:
+              id: Rabbit
       mid27:
-        chance: 0.026176
+        chance: 0.02617647058
         ocelot:
           material: MONSTER_EGG
           amount: 1
           durability: 98
+          nbt:
+            EntityTag:
+              id: Ozelot
+              CatType: 0
       mid28:
-        chance: 0.026176
+        chance: 0.02617647058
         squid:
           material: MONSTER_EGG
           amount: 1
           durability: 94
+          nbt:
+            EntityTag:
+              id: Squid
       mid29:
-        chance: 0.026176
+        chance: 0.02617647058
         wolf:
           material: MONSTER_EGG
           amount: 1
           durability: 95
+          nbt:
+            EntityTag:
+              id: Wolf
       mid30:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: IRON_BARDING
           amount: 1
       mid31:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: BONE
           amount: 32
       mid32:
-        chance: 0.026176
+        chance: 0.02617647058
         item:
           material: PRISMARINE_SHARD
           amount: 5
       mid33:
-        chance: 0.026176
+        chance: 0.02617647076
         item:
           material: PRISMARINE_CRYSTALS
           amount: 3
       mid34:
-        chance: 0.026192
+        chance: 0.02617647058
         item:
           material: JUKEBOX
           amount: 1
-
-#Reinforcement recipes:
   Produce_basic_granite_Miner_Component:
     type: PRODUCTION
     production_time: 2s
@@ -11043,9 +11045,8 @@ recipes:
       basicMiner:
         material: FLINT
         name: Miner Component
-        lore: 
-         - Basic Reinforcement Ingredient
-        
+        lore:
+        - Basic Reinforcement Ingredient
   Produce_basic_andesite_Miner_Component:
     type: PRODUCTION
     production_time: 2s
@@ -11065,9 +11066,8 @@ recipes:
       basicMiner:
         material: FLINT
         name: Miner Component
-        lore: 
-         - Basic Reinforcement Ingredient
-        
+        lore:
+        - Basic Reinforcement Ingredient
   Produce_basic_diorite_Miner_Component:
     type: PRODUCTION
     production_time: 2s
@@ -11087,9 +11087,8 @@ recipes:
       basicMiner:
         material: FLINT
         name: Miner Component
-        lore: 
-         - Basic Reinforcement Ingredient
-        
+        lore:
+        - Basic Reinforcement Ingredient
   Produce_basic_ink_splashed_Hunter_Component:
     type: PRODUCTION
     production_time: 2s
@@ -11108,9 +11107,8 @@ recipes:
       basicHunter:
         material: BONE
         name: Hunter Component
-        lore: 
-         - Basic Reinforcement Ingredient   
-
+        lore:
+        - Basic Reinforcement Ingredient
   Produce_basic_sticky_Hunter_Component:
     type: PRODUCTION
     production_time: 2s
@@ -11126,9 +11124,8 @@ recipes:
       basicHunter:
         material: BONE
         name: Hunter Component
-        lore: 
-         - Basic Reinforcement Ingredient
-
+        lore:
+        - Basic Reinforcement Ingredient
   Produce_basic_mysterious_Hunter_Component:
     type: PRODUCTION
     production_time: 2s
@@ -11147,9 +11144,8 @@ recipes:
       basicHunter:
         material: BONE
         name: Hunter Component
-        lore: 
-         - Basic Reinforcement Ingredient
-        
+        lore:
+        - Basic Reinforcement Ingredient
   Produce_basic_miner_reinforcement:
     type: PRODUCTION
     production_time: 2s
@@ -11158,17 +11154,15 @@ recipes:
       basicMiner:
         material: FLINT
         name: Miner Component
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
         amount: 4
-        
     output:
       basicRein:
         material: CLAY_BALL
         amount: 64
         lore:
-         - Basic Reinforcement
-         
+        - Basic Reinforcement
   Produce_basic_hunter_reinforcement:
     type: PRODUCTION
     production_time: 2s
@@ -11178,15 +11172,14 @@ recipes:
         material: BONE
         name: Hunter Component
         amount: 4
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
     output:
       basicRein:
         material: CLAY_BALL
         amount: 64
         lore:
-         - Basic Reinforcement
-      
+        - Basic Reinforcement
   Produce_decent_solid_Miner_Component:
     type: PRODUCTION
     production_time: 4s
@@ -11195,8 +11188,8 @@ recipes:
       basicHunter:
         material: BONE
         name: Hunter Component
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
         amount: 8
       flint:
         material: FLINT
@@ -11208,9 +11201,8 @@ recipes:
       decentMiner:
         material: QUARTZ
         name: Miner Component
-        lore: 
-         - Decent Reinforcement Ingredient
- 
+        lore:
+        - Decent Reinforcement Ingredient
   Produce_decent_shiny_Miner_Component:
     type: PRODUCTION
     production_time: 4s
@@ -11219,8 +11211,8 @@ recipes:
       basicHunter:
         material: BONE
         name: Hunter Component
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
         amount: 8
       redstone:
         material: REDSTONE
@@ -11232,9 +11224,8 @@ recipes:
       decentMiner:
         material: QUARTZ
         name: Miner Component
-        lore: 
-         - Decent Reinforcement Ingredient
-  
+        lore:
+        - Decent Reinforcement Ingredient
   Produce_decent_bouncy_Hunter_Component:
     type: PRODUCTION
     production_time: 4s
@@ -11243,8 +11234,8 @@ recipes:
       basicMiner:
         material: FLINT
         name: Miner Component
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
         amount: 8
       slime:
         material: SLIME_BALL
@@ -11256,9 +11247,8 @@ recipes:
       decentHunter:
         material: SULPHUR
         name: Hunter Component
-        lore: 
-         - Decent Reinforcement Ingredient
-  
+        lore:
+        - Decent Reinforcement Ingredient
   Produce_decent_heatresistant_Hunter_Component:
     type: PRODUCTION
     production_time: 4s
@@ -11267,8 +11257,8 @@ recipes:
       basicMiner:
         material: FLINT
         name: Miner Component
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
         amount: 8
       magmaCream:
         material: MAGMA_CREAM
@@ -11280,9 +11270,8 @@ recipes:
       decentHunter:
         material: SULPHUR
         name: Hunter Component
-        lore: 
-         - Decent Reinforcement Ingredient
-  
+        lore:
+        - Decent Reinforcement Ingredient
   Produce_decent_reinforcement:
     type: PRODUCTION
     production_time: 5s
@@ -11291,22 +11280,21 @@ recipes:
       decentMiner:
         material: QUARTZ
         name: Miner Component
-        lore: 
-         - Decent Reinforcement Ingredient
+        lore:
+        - Decent Reinforcement Ingredient
         amount: 4
       decentHunter:
         material: SULPHUR
         name: Hunter Component
-        lore: 
-         - Decent Reinforcement Ingredient
+        lore:
+        - Decent Reinforcement Ingredient
         amount: 4
     output:
       slimeball:
         material: SLIME_BALL
         amount: 64
-        lore: 
-         - Decent Reinforcement
-  
+        lore:
+        - Decent Reinforcement
   Produce_strong_Hunter_Component:
     type: PRODUCTION
     production_time: 4s
@@ -11315,8 +11303,8 @@ recipes:
       decentMiner:
         material: QUARTZ
         name: Miner Component
-        lore: 
-         - Decent Reinforcement Ingredient
+        lore:
+        - Decent Reinforcement Ingredient
         amount: 6
       ghastTear:
         material: GHAST_TEAR
@@ -11328,10 +11316,9 @@ recipes:
       strongHunter:
         material: GHAST_TEAR
         name: Hunter Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 1
-      
   Produce_strong_Miner_Component:
     type: PRODUCTION
     production_time: 4s
@@ -11340,8 +11327,8 @@ recipes:
       decentHunter:
         material: SULPHUR
         name: Hunter Component
-        lore: 
-         - Decent Reinforcement Ingredient
+        lore:
+        - Decent Reinforcement Ingredient
         amount: 6
       diamond:
         material: DIAMOND
@@ -11354,10 +11341,9 @@ recipes:
       strongMiner:
         material: PRISMARINE
         name: Miner Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 1
-    
   Produce_good_reinforcement:
     type: PRODUCTION
     production_time: 10s
@@ -11366,22 +11352,21 @@ recipes:
       strongMiner:
         material: PRISMARINE
         name: Miner Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 4
       strongHunter:
         material: GHAST_TEAR
         name: Hunter Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 4
     output:
       goodReinforcement:
         material: MAGMA_CREAM
         amount: 64
         lore:
-         - Good Reinforcement
-      
+        - Good Reinforcement
   Produce_Bracers:
     type: PRODUCTION
     production_time: 5s
@@ -11402,9 +11387,8 @@ recipes:
       bracers:
         material: NETHER_BRICK_ITEM
         lore:
-         - Structure Bracing
+        - Structure Bracing
         amount: 64
-        
   Produce_best_reinforcement:
     type: PRODUCTION
     production_time: 15s
@@ -11413,14 +11397,14 @@ recipes:
       strongMiner:
         material: PRISMARINE
         name: Miner Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 6
       strongHunter:
         material: GHAST_TEAR
         name: Hunter Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 6
       xp:
         material: EMERALD_BLOCK
@@ -11429,9 +11413,8 @@ recipes:
       bestRein:
         material: QUARTZ
         lore:
-         - Best Reinforcement
+        - Best Reinforcement
         amount: 32
-      
   Produce_good_instant_reinforcement:
     type: PRODUCTION
     production_time: 15s
@@ -11440,14 +11423,14 @@ recipes:
       strongMiner:
         material: PRISMARINE
         name: Miner Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 6
       strongHunter:
         material: GHAST_TEAR
         name: Hunter Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 6
       xp:
         material: EMERALD_BLOCK
@@ -11456,9 +11439,8 @@ recipes:
       goodInstantRein:
         material: FIREWORK_CHARGE
         lore:
-         - Rapid Reinforcement
+        - Rapid Reinforcement
         amount: 32
-      
   Upgrade_to_Basic_Fortification:
     production_time: 5m
     type: UPGRADE
@@ -11469,16 +11451,15 @@ recipes:
       basicMiner:
         material: FLINT
         name: Miner Component
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
         amount: 8
       basicHunter:
         material: BONE
         name: Hunter Component
-        lore: 
-         - Basic Reinforcement Ingredient
+        lore:
+        - Basic Reinforcement Ingredient
         amount: 8
-        
   Upgrade_to_Intermediate_Fortification:
     production_time: 1h
     type: UPGRADE
@@ -11489,16 +11470,15 @@ recipes:
       decentMiner:
         material: QUARTZ
         name: Miner Component
-        lore: 
-         - Decent Reinforcement Ingredient
+        lore:
+        - Decent Reinforcement Ingredient
         amount: 8
       decentHunter:
         material: SULPHUR
         name: Hunter Component
-        lore: 
-         - Decent Reinforcement Ingredient
+        lore:
+        - Decent Reinforcement Ingredient
         amount: 8
-        
   Upgrade_to_Advanced_Fortification:
     production_time: 12h
     type: UPGRADE
@@ -11509,18 +11489,15 @@ recipes:
       strongMiner:
         material: PRISMARINE
         name: Miner Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 8
       strongHunter:
         material: GHAST_TEAR
         name: Hunter Component
-        lore: 
-         - Strong Reinforcement Ingredient
+        lore:
+        - Strong Reinforcement Ingredient
         amount: 8
-        
-        
-#Destroy factory and returns the setup cost multiplied by a given factor
   Return_Materials:
     type: COSTRETURN
     production_time: 10s
@@ -11529,5 +11506,3 @@ recipes:
     input:
       dirt:
         material: DIRT
-        
-renames:
