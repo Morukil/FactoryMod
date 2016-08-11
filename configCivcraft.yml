@@ -10276,6 +10276,15 @@ recipes:
           nbt:
             EntityTag:
               id: Pig
+      mid4:
+        chance: 0.02617647058
+        item:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 91
+          nbt:
+            EntityTag:
+              id: Sheep
       mid2:
         chance: 0.02617647058
         item:
@@ -10294,15 +10303,6 @@ recipes:
           nbt:
             EntityTag:
               id: Chicken
-      mid4:
-        chance: 0.02617647058
-        item:
-          material: MONSTER_EGG
-          amount: 1
-          durability: 94
-          nbt:
-            EntityTag:
-              id: Squid
       mid5:
         chance: 0.02617647058
         item:
@@ -10832,6 +10832,15 @@ recipes:
           nbt:
             EntityTag:
               id: Cow
+      mid4:
+        chance: 0.02617647058
+        item:
+          material: MONSTER_EGG
+          amount: 1
+          durability: 91
+          nbt:
+            EntityTag:
+              id: Sheep
       mid3:
         chance: 0.02617647058
         item:
@@ -10841,15 +10850,6 @@ recipes:
           nbt:
             EntityTag:
               id: Chicken
-      mid4:
-        chance: 0.02617647058
-        item:
-          material: MONSTER_EGG
-          amount: 1
-          durability: 94
-          nbt:
-            EntityTag:
-              id: Squid
       mid5:
         chance: 0.02617647058
         item:
