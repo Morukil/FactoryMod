@@ -1320,7 +1320,7 @@ factories:
         material: REDSTONE
         amount: 48
     transfer_time_multiplier: 1s
-    transfer_amount: 16
+    transfer_amount: 48
     glass_color: 1
   betterpipe:
     type: PIPE
@@ -1331,7 +1331,7 @@ factories:
         amount: 384
       gold:
         material: GOLD_INGOT
-        amount: 32
+        amount: 64
     transfer_time_multiplier: 10
     transfer_amount: 24
     glass_color: 2
